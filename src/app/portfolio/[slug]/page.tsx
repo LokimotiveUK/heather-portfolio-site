@@ -219,7 +219,8 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
       <header className="relative h-screen w-full flex items-end overflow-hidden">
         <img alt={project.title} className="absolute inset-0 w-full h-full object-cover" src={heroImage} id="hero-img" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#131313] via-transparent to-transparent opacity-80"></div>
-        <div className="relative z-10 w-full px-12 pb-24 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+        <div className="relative z-10 w-full pb-24">
+          <div className="max-w-[1920px] mx-auto px-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
           <div className="md:col-span-8">
             <span className="font-label text-primary tracking-widest uppercase text-sm mb-4 block">{project.category} / {project.year}</span>
             <h1 className="font-headline text-7xl md:text-9xl font-bold tracking-tighter text-on-surface leading-none">{project.title.toUpperCase()}</h1>
@@ -228,6 +229,7 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
             <p className="font-label text-on-surface-variant uppercase text-xs tracking-wide mb-2">Client</p>
             <p className="font-headline text-2xl text-primary">{project.client}</p>
           </div>
+          </div>{/* end max-w inner container */}
         </div>
       </header>
 
