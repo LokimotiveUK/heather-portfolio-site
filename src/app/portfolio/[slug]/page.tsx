@@ -216,8 +216,15 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
   return (
     <div className="overflow-x-hidden pt-20">
       {/* Hero Section */}
-      <header className="relative h-screen w-full flex items-end overflow-hidden">
-        <img alt={project.title} className="absolute inset-0 w-full h-full object-cover" src={heroImage} id="hero-img" />
+      <header className="relative h-screen w-full flex items-end overflow-hidden bg-[#131313]">
+        {/* Image is capped at 1920 px and centred. On ultra-wide displays the dark
+            background fills the flanking areas, keeping the subject framing identical
+            to what is seen on a standard 1080p / 1440p display. */}
+        <div className="absolute inset-0 flex justify-center">
+          <div className="relative w-full max-w-[1920px] h-full">
+            <img alt={project.title} className="absolute inset-0 w-full h-full object-cover" src={heroImage} id="hero-img" />
+          </div>
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#131313] via-transparent to-transparent opacity-80"></div>
         <div className="relative z-10 w-full pb-24">
           <div className="max-w-[1920px] mx-auto px-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
