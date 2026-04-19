@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { HeroSlideshow } from "@/components/HeroSlideshow";
 
 export default function Home() {
   return (
@@ -7,12 +8,7 @@ export default function Home() {
       {/* Hero Section: The Immersive Monolith */}
       <section className="relative h-screen w-full overflow-hidden flex items-end pb-32 px-12 -mt-[104px]">
         <div className="absolute inset-0 z-0">
-          <img
-            alt="Main Sculpture"
-            className="w-full h-full object-cover filter brightness-75 contrast-110"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ3VHCSFUzEzyLsuAO0gJSC48y6Vm2M_5lL-Q-zCH4pqd3vQbsMfo-cea278gGxhwtpgQzZ_KmYXFBGQo4V5QmztwbzFJD9fsVWfMu2UcNjjlhqKDL8Dt2CHVZhVB58ZDUAK2_yZQblL1fQijHm2QSUQReqs6K1xHoIMqC29dWbsaWGmK_4oN5iKZU5GTTxSQVp8nHEAZrpmCjjN1l08lAu6ik9HplKQi7GwcmMHOBn7LfHe6GcWYP4ab4kY_PNKE0ubEry2T_SGc"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+          <HeroSlideshow />
         </div>
         <div className="relative z-10 max-w-4xl pt-32">
           <h1 className="font-headline text-6xl md:text-8xl lg:text-9xl tracking-tight leading-tight mb-4 text-on-surface">

@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 // Mock data for the dynamic pages
 const projectsData: Record<string, any> = {
   "temple": {
-    title: "The Silent Spire",
+    title: "Temple",
     client: "Personal Project",
     category: "Environments",
     year: "2024",
@@ -26,8 +26,8 @@ const projectsData: Record<string, any> = {
     breakdown4: "/Portfolio/Temple/01-temple.jpg"
   },
   "demon": {
-    title: "Neural Interface V4",
-    client: "Framestore",
+    title: "Demoness",
+    client: "Personal Project",
     category: "Characters",
     year: "2023",
     tris: "85K TRIS",
@@ -48,8 +48,8 @@ const projectsData: Record<string, any> = {
     breakdown4: "/Portfolio/Demon/Demon_uv.jpg"
   },
   "witch": {
-    title: "Obsidian Alley",
-    client: "Wētā FX",
+    title: "Witch",
+    client: "Personal Project",
     category: "Characters",
     year: "2022",
     tris: "2M TRIS",
@@ -92,7 +92,7 @@ const projectsData: Record<string, any> = {
     breakdown4: "/Portfolio/Legacy-of-Adam/legacy-of-adam-priestofherod.jpg"
   },
   "marionette": {
-    title: "Fluidity Study",
+    title: "Marionette",
     client: "Personal Project",
     category: "Characters",
     year: "2023",
@@ -114,7 +114,7 @@ const projectsData: Record<string, any> = {
     breakdown4: "/Portfolio/Marionette/Marionette-clay-render.jpg"
   },
   "warrior": {
-    title: "Warrior Study",
+    title: "Warrior",
     client: "Personal Project",
     category: "Characters",
     year: "2024",
@@ -136,8 +136,8 @@ const projectsData: Record<string, any> = {
     breakdown4: "/Portfolio/Warrior/08-warrior-render4.jpg"
   },
   "cat": {
-    title: "Unit 7 Recon",
-    client: "Industrial Light & Magic",
+    title: "Cat Boss",
+    client: "Personal Project",
     category: "Characters",
     year: "2024",
     tris: "142K TRIS",
@@ -158,7 +158,7 @@ const projectsData: Record<string, any> = {
     breakdown4: "/Portfolio/Cat/01-cat-monster.jpg"
   },
   "dungeon-master": {
-    title: "The Overseer",
+    title: "Dungeon Master",
     client: "Personal Project",
     category: "Characters",
     year: "2023",
@@ -180,7 +180,7 @@ const projectsData: Record<string, any> = {
     breakdown4: "/Portfolio/Dungeon Master/20-Dungeon-master-marmoset.jpg"
   },
   "tokolosh": {
-    title: "Mythic Creature",
+    title: "Tokolosh",
     client: "Personal Project",
     category: "Characters",
     year: "2024",
@@ -350,7 +350,7 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
           </div>
           <div className="relative z-10">
             <span className="font-label text-on-surface-variant text-xs tracking-widest uppercase mb-4 block">Return</span>
-            <h4 className="font-headline text-6xl md:text-8xl font-bold tracking-tighter text-on-surface group-hover:text-primary transition-colors duration-500">BACK TO ARCHIVE</h4>
+            <h4 className="font-headline text-6xl md:text-8xl font-bold tracking-tighter text-on-surface group-hover:text-primary transition-colors duration-500">BACK TO PORTFOLIO</h4>
           </div>
         </Link>
       </section>

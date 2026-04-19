@@ -9,7 +9,7 @@ export default function PortfolioDashboard() {
   const projects = [
     {
       slug: "marionette",
-      title: "Fluidity Study",
+      title: "Marionette",
       client: "Personal Project",
       category: "Characters",
       description: "Exploring organic movement within rigid digital constraints.",
@@ -19,8 +19,8 @@ export default function PortfolioDashboard() {
     },
     {
       slug: "witch",
-      title: "Obsidian Alley",
-      client: "Wētā FX",
+      title: "Witch",
+      client: "Personal Project",
       category: "Characters",
       description: "Detailed character study focusing on expressive lighting and materials.",
       image: "/Portfolio/Witch/01-witch-close.jpg",
@@ -29,7 +29,7 @@ export default function PortfolioDashboard() {
     },
     {
       slug: "dungeon-master",
-      title: "The Overseer",
+      title: "Dungeon Master",
       client: "Personal Project",
       category: "Characters",
       description: "A dark fantasy character concept.",
@@ -39,8 +39,8 @@ export default function PortfolioDashboard() {
     },
     {
       slug: "demon",
-      title: "Neural Interface V4",
-      client: "Framestore",
+      title: "Demoness",
+      client: "Personal Project",
       category: "Characters",
       description: "An exploration of sub-surface scattering and procedurally generated anatomy for digital humans.",
       image: "/Portfolio/Demon/Demon_hero.jpg",
@@ -49,7 +49,7 @@ export default function PortfolioDashboard() {
     },
     {
       slug: "tokolosh",
-      title: "Mythic Creature",
+      title: "Tokolosh",
       client: "Personal Project",
       category: "Characters",
       description: "A creature design based on folklore.",
@@ -59,8 +59,8 @@ export default function PortfolioDashboard() {
     },
     {
       slug: "cat",
-      title: "Unit 7 Recon",
-      client: "Industrial Light & Magic",
+      title: "Cat Boss",
+      client: "Personal Project",
       category: "Characters",
       description: "High-fidelity asset created for cinematic sequences using UDIM workflow and complex material layering.",
       image: "/Portfolio/Cat/01-cat-monster.jpg",
@@ -79,7 +79,7 @@ export default function PortfolioDashboard() {
     },
     {
       slug: "temple",
-      title: "The Silent Spire",
+      title: "Temple",
       client: "Personal Project",
       category: "Environments",
       description: "A study in brutalist architecture and scale, utilizing procedural displacement and custom photogrammetry.",
@@ -89,7 +89,7 @@ export default function PortfolioDashboard() {
     },
     {
       slug: "warrior",
-      title: "Warrior Study",
+      title: "Warrior",
       client: "Personal Project",
       category: "Characters",
       description: "A detailed character study of a fallen warrior, focusing on anatomical realism and dramatic lighting.",
