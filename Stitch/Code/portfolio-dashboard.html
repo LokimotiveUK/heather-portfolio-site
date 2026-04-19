@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#1c1b1b",
+                    "surface-container-highest": "#353534",
+                    "surface-container": "#201f1f",
+                    "tertiary-fixed": "#d6e3ff",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#c7c6c6",
+                    "on-tertiary-fixed": "#031b3b",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "on-tertiary-container": "#293d5e",
+                    "outline": "#9a8f81",
+                    "on-secondary-container": "#b8b8b8",
+                    "on-surface": "#e5e2e1",
+                    "surface-variant": "#353534",
+                    "on-tertiary": "#1c3051",
+                    "primary-fixed": "#ffdeaa",
+                    "primary-container": "#c5a267",
+                    "on-error": "#690005",
+                    "surface-container-lowest": "#0e0e0e",
+                    "inverse-on-surface": "#313030",
+                    "error": "#ffb4ab",
+                    "surface-tint": "#e6c183",
+                    "background": "#131313",
+                    "tertiary-container": "#94a8cf",
+                    "secondary-container": "#484949",
+                    "on-surface-variant": "#d1c5b5",
+                    "on-background": "#e5e2e1",
+                    "tertiary-fixed-dim": "#b3c7ef",
+                    "inverse-primary": "#765a26",
+                    "on-primary-container": "#503806",
+                    "surface-container-high": "#2a2a2a",
+                    "surface-bright": "#3a3939",
+                    "surface-dim": "#131313",
+                    "secondary-fixed": "#e3e2e2",
+                    "on-primary-fixed": "#271900",
+                    "surface": "#131313",
+                    "on-primary": "#422c00",
+                    "inverse-surface": "#e5e2e1",
+                    "primary-fixed-dim": "#e6c183",
+                    "on-tertiary-fixed-variant": "#334769",
+                    "on-primary-fixed-variant": "#5c4210",
+                    "on-secondary-fixed-variant": "#464747",
+                    "secondary": "#c7c6c6",
+                    "outline-variant": "#4e463a",
+                    "error-container": "#93000a",
+                    "primary": "#e6c183",
+                    "on-secondary": "#2f3131",
+                    "tertiary": "#b3c7ef"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Manrope', sans-serif;
+        }
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-background selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 h-20 bg-[#131313]/70 backdrop-blur-xl flex justify-between items-center px-8 md:px-16 w-full">
+<div class="text-lg font-serif font-bold tracking-[0.2em] text-[#e6c183]">GALERIE NOIRE</div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-serif tracking-widest uppercase text-xs md:text-sm text-[#e5e2e1] hover:text-[#e6c183] transition-colors duration-300" href="#">WORK</a>
+<a class="font-serif tracking-widest uppercase text-xs md:text-sm text-[#e6c183] font-bold border-b-2 border-[#e6c183] pb-1" href="#">ARCHIVE</a>
+<a class="font-serif tracking-widest uppercase text-xs md:text-sm text-[#e5e2e1] hover:text-[#e6c183] transition-colors duration-300" href="#">ABOUT</a>
+<a class="font-serif tracking-widest uppercase text-xs md:text-sm text-[#e5e2e1] hover:text-[#e6c183] transition-colors duration-300" href="#">CONTACT</a>
+</div>
+<!-- Mobile Menu Icon -->
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary cursor-pointer">menu</span>
+</div>
+</nav>
+<main class="pt-40 pb-32">
+<!-- Header Section -->
+<section class="px-8 md:px-16 mb-24">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-12">
+<div class="space-y-4">
+<span class="font-label text-on-surface-variant uppercase tracking-[0.3em] text-xs">Heather Courage</span>
+<h1 class="font-headline text-6xl md:text-8xl text-on-surface leading-none">All Works</h1>
+</div>
+<!-- Filter System -->
+<div class="flex flex-wrap gap-x-8 gap-y-4 border-b border-outline-variant/20 pb-4">
+<button class="font-label text-xs uppercase tracking-widest text-primary border-b border-primary pb-2">All Projects</button>
+<button class="font-label text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors pb-2">Characters</button>
+<button class="font-label text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors pb-2">Environments</button>
+<button class="font-label text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors pb-2">VFX</button>
+<button class="font-label text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors pb-2">Personal</button>
+</div>
+</div>
+</section>
+<!-- Archive Grid -->
+<section class="px-8 md:px-16">
+<div class="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-24 gap-x-12">
+<!-- Project 01 -->
+<article class="project-card group relative cursor-pointer">
+<div class="overflow-hidden aspect-[4/5] bg-surface-container mb-6">
+<img class="w-full h-full object-cover transition-transform duration-700 ease-out" data-alt="ultra-detailed 3D sculpt of a futuristic recon soldier with intricate armor plating and glowing amber visor in a dark moody studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYSjpe4OqtrLVGW9tZgIf9dQhP4gZukEoM_Q-2p-qaKCwe_VQ7Rg9233uF7JW9B5UfMWJ8VxeRa4lKNz9sjMMirju4uXpswabMf3PXkCwU33EgPByT-0LPvvm00jdMt9VsMZMtWoZPOJu-YIOpRcz7fvGSG5CDaXPvr8eApR9gG_5vxx0G3GDJUUq48zQdAkPLdHUVhCTpINgHVwmOHFEKVKPXHCehOjCXjthCk0o43b-4FoVbOuIAQYitaYXCZxulDbpjHom1FH0"/>
+<div class="project-overlay absolute inset-0 bg-surface-container-lowest/60 opacity-0 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="font-label text-[10px] tracking-[0.2em] text-primary uppercase mb-2">Modeling / Texturing</span>
+<p class="text-sm text-on-surface leading-relaxed max-w-xs">High-fidelity asset created for cinematic sequences using UDIM workflow and complex material layering.</p>
+</div>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline text-2xl text-on-surface">Unit 7 Recon</h3>
+<p class="font-label text-xs text-on-surface-variant uppercase tracking-widest">Industrial Light &amp; Magic</p>
+</div>
+</article>
+<!-- Project 02 -->
+<article class="project-card group relative cursor-pointer pt-12">
+<div class="overflow-hidden aspect-[4/5] bg-surface-container mb-6">
+<img class="w-full h-full object-cover transition-transform duration-700 ease-out" data-alt="architectural 3D environment of a brutalist monolith rising from a dark desert at night under cold blue starlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvFMf6RPMYv-xK8RN1gb8f-YAyTygacwTgNxIVIiDRw58t5yzt5mK4zvxdDtbeg3htZJT9c4Foy4PeCGZEvaz5omrWBUkkheWy2yaPKIv6UoLVH5lnwXZWGC0LC-mTw-jRSq7Rss33ovuM8mmAzSHGDIL7RS6D5lkmZJsDNy1IVSB1MHNbjQ0fKkW92_rGSvPJ9eylo1gHoWJ8T4D0D2y0g8duU88SFwTshSX2LTwofjH14exKFVdoJq-3m5NudY-kCIRxYOjqXkE"/>
+<div class="project-overlay absolute inset-0 bg-surface-container-lowest/60 opacity-0 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="font-label text-[10px] tracking-[0.2em] text-primary uppercase mb-2">Environment Design</span>
+<p class="text-sm text-on-surface leading-relaxed max-w-xs">A study in brutalist architecture and scale, utilizing procedural displacement and custom photogrammetry.</p>
+</div>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline text-2xl text-on-surface">The Silent Spire</h3>
+<p class="font-label text-xs text-on-surface-variant uppercase tracking-widest">Personal Project</p>
+</div>
+</article>
+<!-- Project 03 -->
+<article class="project-card group relative cursor-pointer">
+<div class="overflow-hidden aspect-[4/5] bg-surface-container mb-6">
+<img class="w-full h-full object-cover transition-transform duration-700 ease-out" data-alt="close-up of a hyper-realistic 3D human eye with complex iris patterns and micro-reflections of a digital interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfbpefT36uBvcQmcsuotffeGB_jN_yVi6nZzL9KOMjH1PhQqngql7rkmf9h0X_aj293KjLSWjhBn-f2r4oDoj1aoxHIjlJ93oN6Uptsv9nuDUC04bA7wTj5socqcBgWf5hX4kuWQ_CRH8-ETd9NUScZmy78rgVpws9lb6KWExwfZMFpUoZa7b7Y0mq4A8C7tV-nusjweSRk99tXbZLKX4FxZKlNX5RirHTygPMZdmCe9wxO8NrKuj6oEkfFgt4jggUZAbgtMpyYSo"/>
+<div class="project-overlay absolute inset-0 bg-surface-container-lowest/60 opacity-0 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="font-label text-[10px] tracking-[0.2em] text-primary uppercase mb-2">VFX / Shading</span>
+<p class="text-sm text-on-surface leading-relaxed max-w-xs">An exploration of sub-surface scattering and procedurally generated anatomy for digital humans.</p>
+</div>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline text-2xl text-on-surface">Neural Interface V4</h3>
+<p class="font-label text-xs text-on-surface-variant uppercase tracking-widest">Framestore</p>
+</div>
+</article>
+<!-- Project 04 -->
+<article class="project-card group relative cursor-pointer md:-mt-12">
+<div class="overflow-hidden aspect-[4/5] bg-surface-container mb-6">
+<img class="w-full h-full object-cover transition-transform duration-700 ease-out" data-alt="atmospheric 3D render of a cyberpunk street in heavy rain with gold neon reflections on black obsidian-like pavement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACdYzpFkcsfYmHn5G02tMgTwG2GlRu0SsGchh0CJO-pZg1YrIYwqYkrPvqRgs9GByy7Ald31oYP0UMJ7kfDw7i1-QZhD2f6clLHFS_GmI6Ta9bjWmLJMM7l0PTgDP57JrIloXI9xAm0v-TyQ8vBy5EDs2A8rxp7Gv0n7d8kSgxLPkL1IfycC_y8cgCGCVFkvIKx-yvno51jH79ncEvWWaJeJCxWvcV5EIOoLMMiP-E8jLyvX5di2l1wTS9xR_mHtq4y-ipsszS-z4"/>
+<div class="project-overlay absolute inset-0 bg-surface-container-lowest/60 opacity-0 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="font-label text-[10px] tracking-[0.2em] text-primary uppercase mb-2">World Building</span>
+<p class="text-sm text-on-surface leading-relaxed max-w-xs">Detailed set-dressing and lighting study focusing on reflective surfaces and atmospheric particle effects.</p>
+</div>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline text-2xl text-on-surface">Obsidian Alley</h3>
+<p class="font-label text-xs text-on-surface-variant uppercase tracking-widest">Wētā FX</p>
+</div>
+</article>
+<!-- Project 05 -->
+<article class="project-card group relative cursor-pointer pt-6">
+<div class="overflow-hidden aspect-[4/5] bg-surface-container mb-6">
+<img class="w-full h-full object-cover transition-transform duration-700 ease-out" data-alt="stylized 3D character sculpt of a forest deity made of dark wood and glowing gold sap in a cinematic soft-focus forest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI_qrO8g_TYVPgGVMkV9JrdSLL36bXAQeMFBZMA9kEu4ZsZKHhPYQOzbKa9qR-zP-R9fhgRaBoaIEedvWzLPGFgz8GoS2zJqeSJgxdUE3btXa8y6viQU4IWMx4PNCB6tK20aoGL1q8nDCRtf1jyIOW-y45xDD-oFjSeS_OVQ0175WBznUQuXRQ5Fnn7-lbXbobEwAqeqwJ0bub7uzpXBpshBu9XMW36cf8wUTgVvz5DHpg2qe8eESMR0qYXxuzC6anT1bn1QMOt3E"/>
+<div class="project-overlay absolute inset-0 bg-surface-container-lowest/60 opacity-0 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="font-label text-[10px] tracking-[0.2em] text-primary uppercase mb-2">Sculpting</span>
+<p class="text-sm text-on-surface leading-relaxed max-w-xs">Organic modeling challenge combining hard-surface wood textures with fluid gold accents.</p>
+</div>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline text-2xl text-on-surface">Amber Soul</h3>
+<p class="font-label text-xs text-on-surface-variant uppercase tracking-widest">Personal Project</p>
+</div>
+</article>
+<!-- Project 06 -->
+<article class="project-card group relative cursor-pointer">
+<div class="overflow-hidden aspect-[4/5] bg-surface-container mb-6">
+<img class="w-full h-full object-cover transition-transform duration-700 ease-out" data-alt="3D mechanical component design with exploded view showing internal gold gears and black chrome housing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeNjocf06oL8zeKpAZhwAkf7M1CLFivd2V6pwNM_JVgHnxQEqU25ssYCdMUY2HHE6LXYI5yLJHE_wKN1A49iuuZ3AVMMcZb8Vy_6Ovni9847Fm5S-3czIGCA9xoWya2yiwRTqZLlTvtrSIULB2RF-k_eB6FANQRL7boK8xp75K3HPZuouT_WibMrHxgm1CVz7Fsg-cdb2w7OnO2d8sSNjnDwXjKQ3vY6ArXZZW3mHEsQVlfwYzniQPJht3qMaJ_DWB60K26dnMqI8"/>
+<div class="project-overlay absolute inset-0 bg-surface-container-lowest/60 opacity-0 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="font-label text-[10px] tracking-[0.2em] text-primary uppercase mb-2">Hard Surface</span>
+<p class="text-sm text-on-surface leading-relaxed max-w-xs">Precision modeling project exploring Boolean workflows and non-destructive modeling techniques.</p>
+</div>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline text-2xl text-on-surface">Cortex Core</h3>
+<p class="font-label text-xs text-on-surface-variant uppercase tracking-widest">The Mill</p>
+</div>
+</article>
+</div>
+</section>
+<!-- Pagination/Load More -->
+<section class="mt-32 flex justify-center">
+<button class="group flex items-center gap-4 px-12 py-6 bg-surface-container-high hover:bg-primary transition-all duration-300">
+<span class="font-label text-xs uppercase tracking-widest text-on-surface group-hover:text-on-primary">Load more archives</span>
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary">keyboard_arrow_down</span>
+</button>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 px-8 md:px-16 bg-[#0e0e0e] flex flex-col md:flex-row justify-between items-center gap-8 w-full">
+<div class="text-sm font-serif text-[#e6c183]">GALERIE NOIRE</div>
+<div class="font-sans text-[10px] tracking-[0.15em] uppercase text-[#d1c5b5]">© 2024 ARCHIVAL MONOLITH. ALL RIGHTS RESERVED.</div>
+<div class="flex gap-8">
+<a class="font-sans text-[10px] tracking-[0.15em] uppercase text-[#d1c5b5] hover:text-[#e6c183] transition-colors duration-300" href="#">ARTSTATION</a>
+<a class="font-sans text-[10px] tracking-[0.15em] uppercase text-[#d1c5b5] hover:text-[#e6c183] transition-colors duration-300" href="#">INSTAGRAM</a>
+<a class="font-sans text-[10px] tracking-[0.15em] uppercase text-[#d1c5b5] hover:text-[#e6c183] transition-colors duration-300" href="#">LINKEDIN</a>
+<a class="font-sans text-[10px] tracking-[0.15em] uppercase text-[#d1c5b5] hover:text-[#e6c183] transition-colors duration-300" href="#">BEHANCE</a>
+</div>
+</footer>
+</body></html>
