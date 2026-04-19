@@ -1,68 +1,107 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 export default function PortfolioDashboard() {
+  const [filter, setFilter] = useState("All");
+
   const projects = [
     {
-      slug: "temple",
-      title: "The Silent Spire",
-      client: "Personal Project",
-      category: "Environment Design",
-      description: "A study in brutalist architecture and scale, utilizing procedural displacement and custom photogrammetry.",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDvFMf6RPMYv-xK8RN1gb8f-YAyTygacwTgNxIVIiDRw58t5yzt5mK4zvxdDtbeg3htZJT9c4Foy4PeCGZEvaz5omrWBUkkheWy2yaPKIv6UoLVH5lnwXZWGC0LC-mTw-jRSq7Rss33ovuM8mmAzSHGDIL7RS6D5lkmZJsDNy1IVSB1MHNbjQ0fKkW92_rGSvPJ9eylo1gHoWJ8T4D0D2y0g8duU88SFwTshSX2LTwofjH14exKFVdoJq-3m5NudY-kCIRxYOjqXkE",
-      alt: "architectural 3D environment of a brutalist monolith rising from a dark desert at night under cold blue starlight",
+      slug: "cat",
+      title: "Unit 7 Recon",
+      client: "Industrial Light & Magic",
+      category: "Characters",
+      description: "High-fidelity asset created for cinematic sequences using UDIM workflow and complex material layering.",
+      image: "/Portfolio/Cat/01-cat-monster.jpg",
+      alt: "Cat Monster",
       delay: "pt-12"
     },
     {
       slug: "demon",
       title: "Neural Interface V4",
       client: "Framestore",
-      category: "VFX / Shading",
+      category: "Characters",
       description: "An exploration of sub-surface scattering and procedurally generated anatomy for digital humans.",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDfbpefT36uBvcQmcsuotffeGB_jN_yVi6nZzL9KOMjH1PhQqngql7rkmf9h0X_aj293KjLSWjhBn-f2r4oDoj1aoxHIjlJ93oN6Uptsv9nuDUC04bA7wTj5socqcBgWf5hX4kuWQ_CRH8-ETd9NUScZmy78rgVpws9lb6KWExwfZMFpUoZa7b7Y0mq4A8C7tV-nusjweSRk99tXbZLKX4FxZKlNX5RirHTygPMZdmCe9wxO8NrKuj6oEkfFgt4jggUZAbgtMpyYSo",
-      alt: "close-up of a hyper-realistic 3D human eye with complex iris patterns and micro-reflections of a digital interface",
+      image: "/Portfolio/Demon/Demon_hero.jpg",
+      alt: "Demon Hero",
+      delay: ""
+    },
+    {
+      slug: "dungeon-master",
+      title: "The Overseer",
+      client: "Personal Project",
+      category: "Characters",
+      description: "A dark fantasy character concept.",
+      image: "/Portfolio/Dungeon Master/01-Dungeon-master-hero.jpg",
+      alt: "Dungeon Master",
+      delay: "md:-mt-12"
+    },
+    {
+      slug: "legacy-of-adam",
+      title: "Legacy of Adam",
+      client: "Personal Project",
+      category: "Characters",
+      description: "Character collection for a narrative project.",
+      image: "/Portfolio/Legacy-of-Adam/legacy-of-adam-eliab.jpg",
+      alt: "Legacy of Adam",
+      delay: "pt-6"
+    },
+    {
+      slug: "marionette",
+      title: "Fluidity Study",
+      client: "Personal Project",
+      category: "Characters",
+      description: "Exploring organic movement within rigid digital constraints.",
+      image: "/Portfolio/Marionette/Marionette-hero.jpg",
+      alt: "Marionette",
+      delay: ""
+    },
+    {
+      slug: "potion-factory",
+      title: "Cortex Core",
+      client: "The Mill",
+      category: "Environments",
+      description: "Precision modeling project exploring Boolean workflows and non-destructive modeling techniques.",
+      image: "/Portfolio/Potion-Factory/CMatthee_PotionFactory_Beauty.jpg",
+      alt: "Potion Factory",
+      delay: ""
+    },
+    {
+      slug: "temple",
+      title: "The Silent Spire",
+      client: "Personal Project",
+      category: "Environments",
+      description: "A study in brutalist architecture and scale, utilizing procedural displacement and custom photogrammetry.",
+      image: "/Portfolio/Temple/01-temple.jpg",
+      alt: "Temple",
+      delay: "pt-12"
+    },
+    {
+      slug: "tokolosh",
+      title: "Mythic Creature",
+      client: "Personal Project",
+      category: "Characters",
+      description: "A creature design based on folklore.",
+      image: "/Portfolio/Tokolosh/01-tokolosh-close.jpg",
+      alt: "Tokolosh",
       delay: ""
     },
     {
       slug: "witch",
       title: "Obsidian Alley",
       client: "Wētā FX",
-      category: "World Building",
-      description: "Detailed set-dressing and lighting study focusing on reflective surfaces and atmospheric particle effects.",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuACdYzpFkcsfYmHn5G02tMgTwG2GlRu0SsGchh0CJO-pZg1YrIYwqYkrPvqRgs9GByy7Ald31oYP0UMJ7kfDw7i1-QZhD2f6clLHFS_GmI6Ta9bjWmLJMM7l0PTgDP57JrIloXI9xAm0v-TyQ8vBy5EDs2A8rxp7Gv0n7d8kSgxLPkL1IfycC_y8cgCGCVFkvIKx-yvno51jH79ncEvWWaJeJCxWvcV5EIOoLMMiP-E8jLyvX5di2l1wTS9xR_mHtq4y-ipsszS-z4",
-      alt: "atmospheric 3D render of a cyberpunk street in heavy rain with gold neon reflections on black obsidian-like pavement",
+      category: "Characters",
+      description: "Detailed character study focusing on expressive lighting and materials.",
+      image: "/Portfolio/Witch/01-witch-close.jpg",
+      alt: "Witch",
       delay: "md:-mt-12"
-    },
-    {
-      slug: "legacy-of-adam",
-      title: "Amber Soul",
-      client: "Personal Project",
-      category: "Sculpting",
-      description: "Organic modeling challenge combining hard-surface wood textures with fluid gold accents.",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAI_qrO8g_TYVPgGVMkV9JrdSLL36bXAQeMFBZMA9kEu4ZsZKHhPYQOzbKa9qR-zP-R9fhgRaBoaIEedvWzLPGFgz8GoS2zJqeSJgxdUE3btXa8y6viQU4IWMx4PNCB6tK20aoGL1q8nDCRtf1jyIOW-y45xDD-oFjSeS_OVQ0175WBznUQuXRQ5Fnn7-lbXbobEwAqeqwJ0bub7uzpXBpshBu9XMW36cf8wUTgVvz5DHpg2qe8eESMR0qYXxuzC6anT1bn1QMOt3E",
-      alt: "stylized 3D character sculpt of a forest deity made of dark wood and glowing gold sap in a cinematic soft-focus forest",
-      delay: "pt-6"
-    },
-    {
-      slug: "potion-factory",
-      title: "Cortex Core",
-      client: "The Mill",
-      category: "Hard Surface",
-      description: "Precision modeling project exploring Boolean workflows and non-destructive modeling techniques.",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBeNjocf06oL8zeKpAZhwAkf7M1CLFivd2V6pwNM_JVgHnxQEqU25ssYCdMUY2HHE6LXYI5yLJHE_wKN1A49iuuZ3AVMMcZb8Vy_6Ovni9847Fm5S-3czIGCA9xoWya2yiwRTqZLlTvtrSIULB2RF-k_eB6FANQRL7boK8xp75K3HPZuouT_WibMrHxgm1CVz7Fsg-cdb2w7OnO2d8sSNjnDwXjKQ3vY6ArXZZW3mHEsQVlfwYzniQPJht3qMaJ_DWB60K26dnMqI8",
-      alt: "3D mechanical component design with exploded view showing internal gold gears and black chrome housing",
-      delay: ""
-    },
-    {
-      slug: "cat",
-      title: "Unit 7 Recon",
-      client: "Industrial Light & Magic",
-      category: "Modeling / Texturing",
-      description: "High-fidelity asset created for cinematic sequences using UDIM workflow and complex material layering.",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDYSjpe4OqtrLVGW9tZgIf9dQhP4gZukEoM_Q-2p-qaKCwe_VQ7Rg9233uF7JW9B5UfMWJ8VxeRa4lKNz9sjMMirju4uXpswabMf3PXkCwU33EgPByT-0LPvvm00jdMt9VsMZMtWoZPOJu-YIOpRcz7fvGSG5CDaXPvr8eApR9gG_5vxx0G3GDJUUq48zQdAkPLdHUVhCTpINgHVwmOHFEKVKPXHCehOjCXjthCk0o43b-4FoVbOuIAQYitaYXCZxulDbpjHom1FH0",
-      alt: "ultra-detailed 3D sculpt of a futuristic recon soldier with intricate armor plating and glowing amber visor in a dark moody studio",
-      delay: ""
     }
   ];
+
+  const filteredProjects = filter === "All" 
+    ? projects 
+    : projects.filter(p => p.category === filter);
 
   return (
     <div className="pt-40 pb-32">
@@ -75,11 +114,24 @@ export default function PortfolioDashboard() {
           </div>
           {/* Filter System */}
           <div className="flex flex-wrap gap-x-8 gap-y-4 border-b border-outline-variant/20 pb-4">
-            <button className="font-label text-xs uppercase tracking-widest text-primary border-b border-primary pb-2">All Projects</button>
-            <button className="font-label text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors pb-2">Characters</button>
-            <button className="font-label text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors pb-2">Environments</button>
-            <button className="font-label text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors pb-2">VFX</button>
-            <button className="font-label text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors pb-2">Personal</button>
+            <button 
+              onClick={() => setFilter("All")}
+              className={`font-label text-xs uppercase tracking-widest pb-2 transition-colors ${filter === "All" ? "text-primary border-b border-primary" : "text-on-surface-variant hover:text-primary"}`}
+            >
+              All Projects
+            </button>
+            <button 
+              onClick={() => setFilter("Characters")}
+              className={`font-label text-xs uppercase tracking-widest pb-2 transition-colors ${filter === "Characters" ? "text-primary border-b border-primary" : "text-on-surface-variant hover:text-primary"}`}
+            >
+              Characters
+            </button>
+            <button 
+              onClick={() => setFilter("Environments")}
+              className={`font-label text-xs uppercase tracking-widest pb-2 transition-colors ${filter === "Environments" ? "text-primary border-b border-primary" : "text-on-surface-variant hover:text-primary"}`}
+            >
+              Environments
+            </button>
           </div>
         </div>
       </section>
@@ -87,7 +139,7 @@ export default function PortfolioDashboard() {
       {/* Archive Grid */}
       <section className="px-8 md:px-16">
         <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-24 gap-x-12">
-          {projects.map((project, idx) => (
+          {filteredProjects.map((project, idx) => (
             <Link key={idx} href={`/portfolio/${project.slug}`} className={`group relative cursor-pointer block ${project.delay}`}>
               <div className="overflow-hidden aspect-[4/5] bg-surface-container mb-6 relative">
                 <img

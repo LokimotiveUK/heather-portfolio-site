@@ -18,7 +18,7 @@ export default function About() {
           <div className="relative w-full h-full bg-surface-container-low overflow-hidden">
             <img
               className="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHRSyqBIOEm26PlD4bBWa4pC16_B_utUzPcJbnCjjC9sYrZqqzwI-YIZJtgrjxBbbY3TjYT6aMH_qrCu46zhNeMoQbtDugWSVfco7Kt9t5nde7v2Q54MT3su8kkc5Ll1xCpuHUkkqfMrVQeJp6ko25-J3pIsw2CzEF1rZWYv2Vh8PrAZ8uHQxCGoryLbckUySJA2Iupk9we9OyXn77ODvYdbRrDVy91K2V0FDlo4EXbW2oQeYMZ_f4ZcbFYFms-6kTlJg6eMnbEFw"
+              src="/Artist/Heather-1.png"
               alt="Heather Courage"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>

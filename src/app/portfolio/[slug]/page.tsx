@@ -6,7 +6,7 @@ const projectsData: Record<string, any> = {
   "temple": {
     title: "The Silent Spire",
     client: "Personal Project",
-    category: "Environment Design",
+    category: "Environments",
     year: "2024",
     tris: "142K TRIS",
     textures: "5x 4K PBR",
@@ -15,12 +15,20 @@ const projectsData: Record<string, any> = {
     description: "An exploration of silent lethality. The vision was to create a silhouette that feels both monolithic and agile, drawing inspiration from predatory anatomy and brutalist architecture.",
     phase1: "High-fidelity sculpting performed in ZBrush. Emphasis on anatomical accuracy beneath the hard-surface components to ensure realistic deformation during animation.",
     phase2: "Retopology focused on edge-flow for cinematic rigging. The mesh is optimized for sub-division surfaces while maintaining a manageable base-poly count.",
-    phase3: "Material definition via Substance Painter. We utilized a layered shader approach: a base obsidian ceramic, topped with a metallic gold leaf, finished with a procedural dust and wear layer."
+    phase3: "Material definition via Substance Painter. We utilized a layered shader approach: a base obsidian ceramic, topped with a metallic gold leaf, finished with a procedural dust and wear layer.",
+    heroImage: "/Portfolio/Temple/01-temple.jpg",
+    detailImage1: "/Portfolio/Temple/02-temple.jpg",
+    detailImage2: "/Portfolio/Temple/03-temple.jpg",
+    detailImage3: "/Portfolio/Temple/04-temple.jpg",
+    breakdown1: "/Portfolio/Temple/05-temple.jpg",
+    breakdown2: "/Portfolio/Temple/06-temple.jpg",
+    breakdown3: "/Portfolio/Temple/07-temple.jpg",
+    breakdown4: "/Portfolio/Temple/01-temple.jpg"
   },
   "demon": {
     title: "Neural Interface V4",
     client: "Framestore",
-    category: "VFX / Shading",
+    category: "Characters",
     year: "2023",
     tris: "85K TRIS",
     textures: "3x 4K PBR",
@@ -29,40 +37,64 @@ const projectsData: Record<string, any> = {
     description: "A demon-inspired neural interface.",
     phase1: "Concept and base blockout.",
     phase2: "Refining the mechanical and organic integration.",
-    phase3: "Final lookdev and compositing."
+    phase3: "Final lookdev and compositing.",
+    heroImage: "/Portfolio/Demon/Demon_hero.jpg",
+    detailImage1: "/Portfolio/Demon/Demon_face.jpg",
+    detailImage2: "/Portfolio/Demon/Demon_side.jpg",
+    detailImage3: "/Portfolio/Demon/Demon_book.jpg",
+    breakdown1: "/Portfolio/Demon/Demon_sculpt1.jpg",
+    breakdown2: "/Portfolio/Demon/Demon_retopo.jpg",
+    breakdown3: "/Portfolio/Demon/Demon_substance1.jpg",
+    breakdown4: "/Portfolio/Demon/Demon_uv.jpg"
   },
   "witch": {
     title: "Obsidian Alley",
     client: "Wētā FX",
-    category: "World Building",
+    category: "Characters",
     year: "2022",
     tris: "2M TRIS",
     textures: "10x 4K PBR",
     workflow: "UDIM",
     software: ["Unreal Engine", "Maya"],
-    description: "Detailed set-dressing and lighting study focusing on reflective surfaces and atmospheric particle effects.",
+    description: "Detailed character study focusing on expressive lighting and materials.",
     phase1: "Layout and blocking.",
     phase2: "Asset creation and placement.",
-    phase3: "Lighting and atmospheric effects."
+    phase3: "Lighting and atmospheric effects.",
+    heroImage: "/Portfolio/Witch/01-witch-close.jpg",
+    detailImage1: "/Portfolio/Witch/02-witch-full-body.jpg",
+    detailImage2: "/Portfolio/Witch/03-witch-torso.jpg",
+    detailImage3: "/Portfolio/Witch/04-witch-side.jpg",
+    breakdown1: "/Portfolio/Witch/10-witch-sculpt.jpg",
+    breakdown2: "/Portfolio/Witch/07-witch-mesh.jpg",
+    breakdown3: "/Portfolio/Witch/05-witch-maps1.jpg",
+    breakdown4: "/Portfolio/Witch/08-witch-marmoset-screen.jpg"
   },
   "legacy-of-adam": {
-    title: "Amber Soul",
+    title: "Legacy of Adam",
     client: "Personal Project",
-    category: "Sculpting",
+    category: "Characters",
     year: "2024",
     tris: "120K TRIS",
     textures: "4x 4K PBR",
     workflow: "Standard",
     software: ["ZBrush", "Substance"],
-    description: "Organic modeling challenge combining hard-surface wood textures with fluid gold accents.",
+    description: "Character collection for a narrative project.",
     phase1: "Primary forms and silhouette.",
     phase2: "Secondary details and surface texture.",
-    phase3: "Material separation and final rendering."
+    phase3: "Material separation and final rendering.",
+    heroImage: "/Portfolio/Legacy-of-Adam/legacy-of-adam-eliab.jpg",
+    detailImage1: "/Portfolio/Legacy-of-Adam/legacy-of-adam-fatguy.jpg",
+    detailImage2: "/Portfolio/Legacy-of-Adam/legacy-of-adam-jonothan.jpg",
+    detailImage3: "/Portfolio/Legacy-of-Adam/legacy-of-adam-joseph.jpg",
+    breakdown1: "/Portfolio/Legacy-of-Adam/legacy-of-adam-judas.jpg",
+    breakdown2: "/Portfolio/Legacy-of-Adam/legacy-of-adam-npc91.jpg",
+    breakdown3: "/Portfolio/Legacy-of-Adam/legacy-of-adam-pharisee.jpg",
+    breakdown4: "/Portfolio/Legacy-of-Adam/legacy-of-adam-priestofherod.jpg"
   },
   "marionette": {
     title: "Fluidity Study",
     client: "Personal Project",
-    category: "Abstract",
+    category: "Characters",
     year: "2023",
     tris: "50K TRIS",
     textures: "1x 4K PBR",
@@ -71,12 +103,20 @@ const projectsData: Record<string, any> = {
     description: "Exploring organic movement within rigid digital constraints.",
     phase1: "Procedural setup and simulation.",
     phase2: "Cache and mesh generation.",
-    phase3: "Shading and rendering."
+    phase3: "Shading and rendering.",
+    heroImage: "/Portfolio/Marionette/Marionette-hero.jpg",
+    detailImage1: "/Portfolio/Marionette/Marionette1.jpg",
+    detailImage2: "/Portfolio/Marionette/Marionette2.jpg",
+    detailImage3: "/Portfolio/Marionette/Marionette3.jpg",
+    breakdown1: "/Portfolio/Marionette/Marionette-sculpt.jpg",
+    breakdown2: "/Portfolio/Marionette/Marionette-wireframe.jpg",
+    breakdown3: "/Portfolio/Marionette/Marionette-mix.jpg",
+    breakdown4: "/Portfolio/Marionette/Marionette-clay-render.jpg"
   },
   "potion-factory": {
     title: "Cortex Core",
     client: "The Mill",
-    category: "Hard Surface",
+    category: "Environments",
     year: "2022",
     tris: "500K TRIS",
     textures: "8x 4K PBR",
@@ -85,12 +125,20 @@ const projectsData: Record<string, any> = {
     description: "Precision modeling project exploring Boolean workflows and non-destructive modeling techniques.",
     phase1: "Hard surface blockout.",
     phase2: "Boolean operations and bevels.",
-    phase3: "Texture baking and lookdev."
+    phase3: "Texture baking and lookdev.",
+    heroImage: "/Portfolio/Potion-Factory/CMatthee_PotionFactory_Beauty.jpg",
+    detailImage1: "/Portfolio/Potion-Factory/CMatthee_PotionFactory_CloseUp.jpg",
+    detailImage2: "/Portfolio/Potion-Factory/CMatthee_PotionFactory_Wireframe.jpg",
+    detailImage3: "/Portfolio/Potion-Factory/CMatthee_PotionFactory_Beauty.jpg",
+    breakdown1: "/Portfolio/Potion-Factory/CMatthee_PotionFactory_Wireframe.jpg",
+    breakdown2: "/Portfolio/Potion-Factory/CMatthee_PotionFactory_CloseUp.jpg",
+    breakdown3: "/Portfolio/Potion-Factory/CMatthee_PotionFactory_Beauty.jpg",
+    breakdown4: "/Portfolio/Potion-Factory/CMatthee_PotionFactory_Wireframe.jpg"
   },
   "cat": {
     title: "Unit 7 Recon",
     client: "Industrial Light & Magic",
-    category: "Modeling / Texturing",
+    category: "Characters",
     year: "2024",
     tris: "142K TRIS",
     textures: "5x 4K PBR",
@@ -99,12 +147,20 @@ const projectsData: Record<string, any> = {
     description: "High-fidelity asset created for cinematic sequences using UDIM workflow and complex material layering.",
     phase1: "Concept to 3D blockout.",
     phase2: "High poly sculpting and detailing.",
-    phase3: "Retopology, UVs, and final textures."
+    phase3: "Retopology, UVs, and final textures.",
+    heroImage: "/Portfolio/Cat/01-cat-monster.jpg",
+    detailImage1: "/Portfolio/Cat/02-cat-monster.jpg",
+    detailImage2: "/Portfolio/Cat/03-cat-monster.jpg",
+    detailImage3: "/Portfolio/Cat/04-cat-monster.jpg",
+    breakdown1: "/Portfolio/Cat/05-cat-monster.jpg",
+    breakdown2: "/Portfolio/Cat/06-cat-monster.jpg",
+    breakdown3: "/Portfolio/Cat/07-cat-monster.jpg",
+    breakdown4: "/Portfolio/Cat/01-cat-monster.jpg"
   },
   "dungeon-master": {
     title: "The Overseer",
     client: "Personal Project",
-    category: "Character Design",
+    category: "Characters",
     year: "2023",
     tris: "95K TRIS",
     textures: "4x 4K PBR",
@@ -113,12 +169,20 @@ const projectsData: Record<string, any> = {
     description: "A dark fantasy character concept.",
     phase1: "Anatomy study.",
     phase2: "Cloth simulation.",
-    phase3: "Final detailing."
+    phase3: "Final detailing.",
+    heroImage: "/Portfolio/Dungeon Master/01-Dungeon-master-hero.jpg",
+    detailImage1: "/Portfolio/Dungeon Master/02-Dungeon-master-head.jpg",
+    detailImage2: "/Portfolio/Dungeon Master/03-Dungeon-master-torso.jpg",
+    detailImage3: "/Portfolio/Dungeon Master/05-Dungeon-master-skull-1.jpg",
+    breakdown1: "/Portfolio/Dungeon Master/09-Dungeon-master-sculpt-1.jpg",
+    breakdown2: "/Portfolio/Dungeon Master/14-Dungeon-master-wireframe.jpg",
+    breakdown3: "/Portfolio/Dungeon Master/12-Dungeon-master-maps-1.jpg",
+    breakdown4: "/Portfolio/Dungeon Master/20-Dungeon-master-marmoset.jpg"
   },
   "tokolosh": {
     title: "Mythic Creature",
     client: "Personal Project",
-    category: "Creature Design",
+    category: "Characters",
     year: "2024",
     tris: "110K TRIS",
     textures: "6x 4K PBR",
@@ -127,7 +191,15 @@ const projectsData: Record<string, any> = {
     description: "A creature design based on folklore.",
     phase1: "Base mesh and proportions.",
     phase2: "Skin detailing and alphas.",
-    phase3: "Texture painting."
+    phase3: "Texture painting.",
+    heroImage: "/Portfolio/Tokolosh/01-tokolosh-close.jpg",
+    detailImage1: "/Portfolio/Tokolosh/02-tokolosh-face.jpg",
+    detailImage2: "/Portfolio/Tokolosh/03-tokolosh-body.jpg",
+    detailImage3: "/Portfolio/Tokolosh/01-tokolosh-close.jpg",
+    breakdown1: "/Portfolio/Tokolosh/07-tokolosh-head-sculpt.jpg",
+    breakdown2: "/Portfolio/Tokolosh/11-tokolosh-paint-map.jpg",
+    breakdown3: "/Portfolio/Tokolosh/12-tokolosh-workspace.jpg",
+    breakdown4: "/Portfolio/Tokolosh/02-tokolosh-face.jpg"
   }
 };
 
@@ -139,15 +211,7 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
     notFound();
   }
 
-  // Placeholder images for now (to be replaced by AI generated ones)
-  const heroImage = "https://lh3.googleusercontent.com/aida-public/AB6AXuDvk3zQyzpsaZ6QvXGQ0izdOcdjeh988Rj32_DcFIMADVUZfkgrhx8IWM7rxBHvl_1S-9F2Rat_4Fnp4j8thE8M9Ry5UCq0Cx_K_w_ruczn9E1ZObdKyJPqVuF9XgXy5o893nAkxeBXIMkn0xqfIVR7I056YKuiuAwHByYLGh4eCVEy71QjeZ7vGNt-RIBrU-wDXv4LpiN-BJOEzbtSN3MN7PKVv18x0krZvUQbNkpi5JiQg3DNt8VLeCSm-4FyyDE7JINY7sX6q9E";
-  const detailImage1 = "https://lh3.googleusercontent.com/aida-public/AB6AXuATh0S9Rx0gbJHcmYVELJm651Z3x36KI6UC3C8E4927_Xg7T90BB7XktRLIaFgWjUgzSMaAGaBK_A_-NK5lTbIt2FPcO9rI4b57I4HaRwXm87UJ2lKodWjaQdavJYs4-f7785L0qNbSX9exGys7uKvh_VmwWAPiTlCW1QeyuDlbD2T_fni5QbiV0r5uBv4YYBXBrjfwLjq6RJncggmqIVldZVsPZrWhlhM20GZ8Fimb1OGqLKebmEeofKAzYpNDjMh62udht7OseUs";
-  const detailImage2 = "https://lh3.googleusercontent.com/aida-public/AB6AXuCihsYm-N-HMcwf4Dxx_Bu-rTDRLI0Q_2DtXHY2rc0jqSdaSNC7fuRCxwfnnZuM5-RBfY-k8CHnaKrJK1f4ehDkhPZfkE6xSvZKRWJtWpNe8Aatl9bGoRys69n0D0-Eg0FylCpvh3qBLZ9jWH9y9cYq8-oH4374hQj4LdY7Kv67COHxy4gQYdHlReuJwKKgkHH2nSQuDHKWsZlokkPvH7nOBCv8RThrkmNTR4qZZEDX4SD_yiKpQjf-shIuIFOW5c6uPfKpBpHBkHE";
-  const detailImage3 = "https://lh3.googleusercontent.com/aida-public/AB6AXuBTgVkJ1-NvY-2p5X3wR6oKbfkxDtIUQOavpZT2tMDqOzYuD31aEzTG5C0oN67hWPFz3pU7riZ_XfxvgLIF4rLGvD8L70pPjLJ_5DMK-xFCDnglJ9BSrdGKi3ak9sT0h7xQd4C2LfjfmanE4AW-imt8K6lOfEf0SKptxT8p9aL-AYypId5KYBnsPZrl2o7WGUkyoUYHHu3ESTwzoBQmOFHWnp9W5-aEVebtTPrTv6HV7By35QTJbPKoCNnZspl72zasgddyv7L3Bgc";
-  const breakdown1 = "https://lh3.googleusercontent.com/aida-public/AB6AXuDbvU6YBbyrpnIeFvq3QnTl9U3Jk_-XRNQO8DUE43EXw3bHmJS8xXlT3vzgMZZF5YJROjCHVnxd1_gMykCE-uNLvHUruLjAOgnn8GFn_27YZkdopH4tWjbo8-a_1PNo9fT4K5jtoB5BNxw1pvmZ2tjCd79IoL_5GmGbzWcq-9aequRdNVtxBnTHLaix2BBa98X-a85nOc9HsqkjE7U1CV1IqtJ19Is6GSbbkNpDz8BIPmKZeSXfcTn5YhBcADS8vgjZiU4tW0MvZL4";
-  const breakdown2 = "https://lh3.googleusercontent.com/aida-public/AB6AXuDIjgt-GBXzovECSbX6LxyTZeXhvwYSJJt3iZOJveAIPAARuIwHkvLyb5j0rbZ7zVwgIrG-9wvAicfY4j6Es-Ts1nJ1Aos0cXNMfgusGB1UB-1zC5VEMDVpwfPQxsgKmCiRAV6EIaC35a0JmLFS1Dqfu8b5UBS4e4kyDaWSu5k9LNbTxjr-NlGCiygEgfHNNPdfXLYBYX3SX5f44g733H0TUPxvx9HGUU7sy8b_V9XKEbT-ROxQ5xAgyGy2l3HPoDJWqLQs7MwA858";
-  const breakdown3 = "https://lh3.googleusercontent.com/aida-public/AB6AXuC_ysKqSSBSnpvZ4eNNCInCwMDyO-omGe7yG2m441OGYKMqczWbp6kG8O2wACQar4Ry7aIXDZkA8Bkj6xfEaiTGvj1F45NP79dMf1-8VtrCRPrZa4lRoEgpOhsmFCcqTsxgu4XJcQjA2Bk2v0efx1sbWSQlHWWVLic-Ioi5aA73vGiEBUT1awSBZ8OB5mi8-XxtZzNkPe7S7PS_bzMNKZmrgJp-7AIjq7KvNT_N5PrqvNW8DZPMr9PMRpx_7tdciCyN0ipDscpZSrc";
-  const breakdown4 = "https://lh3.googleusercontent.com/aida-public/AB6AXuCYXQmphtsDUsgPwwqjdj79lG7vfHWOmKMZIxeGIG_GUzIodvHA-D6JHtMgQxuCNe4Zr1IH2bQm0g5BFoKqlQRUWCtKPAcqbZ3TEJ3cv89wZoL7SFfNw1ae52gCrfrwLwANuimVBEft9ZGj5HuCV8V5d2LJKxf_rE5I_E7L5pZBmHCQ5dldohAySF1BTI6OIPNAro2zRRWn0mpIt-0vO3IeWIj5AOgUZeayHYXEwpYZ1fCL2l5DbNCRMmbfzWhAP8XEP5n6AWUIXmI";
+  const { heroImage, detailImage1, detailImage2, detailImage3, breakdown1, breakdown2, breakdown3, breakdown4 } = project;
 
   return (
     <div className="overflow-x-hidden pt-20">
