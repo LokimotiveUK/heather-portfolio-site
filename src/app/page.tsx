@@ -28,68 +28,68 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-y-32 md:gap-x-12">
           {/* Large Feature Item */}
-          <Link href="/portfolio/temple" className="md:col-span-8 group cursor-crosshair block">
+          <Link href="/portfolio/marionette" className="md:col-span-8 group cursor-crosshair block">
             <div className="overflow-hidden bg-surface-container-low transition-colors duration-500 group-hover:bg-surface-container-high">
               <img
-                alt="Environment Work"
+                alt="Marionette"
                 className="w-full aspect-[16/9] object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXOfo1BzGyU3PKpE5iMmQKyHi6WsiEnhKebxnIbVFe-pxCmmOy333RHi2uyC_hqY6b9U4OQXypp5tLcVbeGAKdlEXpL8JoMTqJ_qGkXe2-Je7bvkS03j6sXBJ4-wV6HOjaVxUmBj2rh-X8vIu-E-95IicjRVFJmFwYPTNKQWHxJTdCavZI8k7eNwxlhZpzI0eYkJqGkHhQhUt0tnRpISHh2BT48hzIsTWlXKr0pMlBJgA-YrWeRrGIVifnvJO9Lm6ZB2HM0vm4eNU"
+                src="/Portfolio/Marionette/Marionette-hero.jpg"
               />
             </div>
             <div className="mt-8 flex justify-between items-start">
               <div className="max-w-md">
-                <h3 className="font-headline text-2xl mb-2 group-hover:text-primary transition-colors duration-300">The Obsidian Nave</h3>
+                <h3 className="font-headline text-2xl mb-2 group-hover:text-primary transition-colors duration-300">MARIONETTE</h3>
                 <p className="font-body text-sm text-on-surface-variant leading-relaxed">
-                  A study in atmospheric depth and architectural rhythm. Constructed for high-fidelity real-time rendering environments.
+                  Exploring organic movement within rigid digital constraints.
                 </p>
               </div>
-              <span className="font-label text-[10px] tracking-widest uppercase py-1 px-3 border border-outline-variant/30 text-on-surface-variant">Environment</span>
+              <span className="font-label text-[10px] tracking-widest uppercase py-1 px-3 border border-outline-variant/30 text-on-surface-variant">Character</span>
             </div>
           </Link>
 
           {/* Secondary Small Item (Asymmetric Offset) */}
-          <Link href="/portfolio/witch" className="md:col-span-4 md:mt-40 group cursor-crosshair block">
+          <Link href="/portfolio/dungeon-master" className="md:col-span-4 md:mt-40 group cursor-crosshair block">
             <div className="overflow-hidden bg-surface-container-low">
               <img
-                alt="Character Work"
+                alt="Dungeon Master"
                 className="w-full aspect-[4/5] object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpl_ADsxOT5pJnFqZ19-o5ElfqF2uNXSw_XhBOv7CX0TQma7BWxrBB_YOekrE1ueHxngC_CPWGRJw7pKTnxu_pJZE7OPo7NaOqGoOZqEZjeA6L12eZ3ixfbnl1DkXWeC9wkzwRCDbu_sHkMTIIFFnZbDbKC39eX0H50QBNhkQDIv7P_0vvphYiF6CtCcSzNpwWy0FyrdCCjXqc93xirTU1cwzyXJeo6Qsqj3KPBHa8B_b2CPVzOOBCDg4neUjKD7snNAo3g39iN2c"
+                src="/Portfolio/Dungeon Master/01-Dungeon-master-hero.jpg"
               />
             </div>
             <div className="mt-8">
-              <h3 className="font-headline text-2xl mb-2 group-hover:text-primary transition-colors duration-300">The Oracle</h3>
-              <p className="font-body text-sm text-on-surface-variant mb-4">High-fidelity character anatomy and texture articulation.</p>
+              <h3 className="font-headline text-2xl mb-2 group-hover:text-primary transition-colors duration-300">DUNGEON MASTER</h3>
+              <p className="font-body text-sm text-on-surface-variant mb-4">A dark fantasy character concept.</p>
               <span className="font-label text-[10px] tracking-widest uppercase py-1 px-3 border border-outline-variant/30 text-on-surface-variant">Character</span>
             </div>
           </Link>
 
           {/* Third Item (Full Width or Offset) */}
-          <Link href="/portfolio/demon" className="md:col-start-2 md:col-span-6 group cursor-crosshair block">
+          <Link href="/portfolio/witch" className="md:col-start-2 md:col-span-6 group cursor-crosshair block">
             <div className="overflow-hidden bg-surface-container-low">
               <img
-                alt="Textural Detail"
-                className="w-full aspect-[3/2] object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOCyoJ6H4-rGSFfmaNwRK2qIpdJeb2FhPszCsfm65--E4kuuR9vqN1AlM865LqwpEs0LA_Ro4ZeuseWYf8OPfvROAkiHYILnQ2d3U2CpHFe09CulDkee3PEkyWlfnwvBBY5DgdU1NGFkjgcNhvx1bq5hxIdB_vFxSxQg1lZ1zN1bXCo5WMXxgO-9H5DzI3G4dU5Kudw2hOImHkS2P66EKBDZNDGdFc5Et2xxyGFGqq-6EplUdEeuHBnb5GbukECrHNWHvxDNADjqg"
+                alt="Witch"
+                className="w-full aspect-[3/2] object-cover object-[center_15%] grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out"
+                src="/Portfolio/Witch/01-witch-close.jpg"
               />
             </div>
             <div className="mt-8">
-              <h3 className="font-headline text-2xl mb-2 group-hover:text-primary transition-colors duration-300">Fragmented Gilded No. 4</h3>
-              <p className="font-body text-sm text-on-surface-variant">Surface materiality study exploring the intersection of light and rough metal.</p>
+              <h3 className="font-headline text-2xl mb-2 group-hover:text-primary transition-colors duration-300">WITCH</h3>
+              <p className="font-body text-sm text-on-surface-variant">Detailed character study focusing on expressive lighting and materials.</p>
             </div>
           </Link>
 
           {/* Fourth Item */}
-          <Link href="/portfolio/marionette" className="md:col-span-4 md:self-center group cursor-crosshair block">
+          <Link href="/portfolio/tokolosh" className="md:col-span-4 md:self-center group cursor-crosshair block">
             <div className="overflow-hidden bg-surface-container-low">
               <img
-                alt="Abstract Form"
+                alt="Tokolosh"
                 className="w-full aspect-square object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO4KY1MerC3s5YzEk-AUQSk_NIJ2x8eoJmdsODAAtXIjGvTVZE8qsONk3Y_dnWLa8Oe0_VhkJ9fr5ICOapu43tT6ZX1Qp-pBMliPlgSgorawmnjszTmYf8KClfLmFJyw8dI-iTnVFWYV7kyV70mHKAYvRLa8NPrlAibtYZpmXvkP9hsndWGnNVVQQccHjHB1Vu9uH_sp6KaSvM2FinATDdlGkNGcvZWNovr-4EAziHMg_sK3MrQJKJSawJg2jlATc3HCkpjCtw_eI"
+                src="/Portfolio/Tokolosh/01-tokolosh-close.jpg"
               />
             </div>
             <div className="mt-8">
-              <h3 className="font-headline text-2xl mb-2 group-hover:text-primary transition-colors duration-300">Fluidity Study</h3>
-              <p className="font-body text-sm text-on-surface-variant">Exploring organic movement within rigid digital constraints.</p>
+              <h3 className="font-headline text-2xl mb-2 group-hover:text-primary transition-colors duration-300">TOKOLOSH</h3>
+              <p className="font-body text-sm text-on-surface-variant">A creature design based on folklore.</p>
             </div>
           </Link>
         </div>
