@@ -8,24 +8,24 @@ export default function PortfolioDashboard() {
 
   const projects = [
     {
-      slug: "cat",
-      title: "Unit 7 Recon",
-      client: "Industrial Light & Magic",
+      slug: "marionette",
+      title: "Fluidity Study",
+      client: "Personal Project",
       category: "Characters",
-      description: "High-fidelity asset created for cinematic sequences using UDIM workflow and complex material layering.",
-      image: "/Portfolio/Cat/01-cat-monster.jpg",
-      alt: "Cat Monster",
-      delay: "pt-12"
+      description: "Exploring organic movement within rigid digital constraints.",
+      image: "/Portfolio/Marionette/Marionette-hero.jpg",
+      alt: "Marionette",
+      delay: ""
     },
     {
-      slug: "demon",
-      title: "Neural Interface V4",
-      client: "Framestore",
+      slug: "witch",
+      title: "Obsidian Alley",
+      client: "Wētā FX",
       category: "Characters",
-      description: "An exploration of sub-surface scattering and procedurally generated anatomy for digital humans.",
-      image: "/Portfolio/Demon/Demon_hero.jpg",
-      alt: "Demon Hero",
-      delay: ""
+      description: "Detailed character study focusing on expressive lighting and materials.",
+      image: "/Portfolio/Witch/01-witch-close.jpg",
+      alt: "Witch",
+      delay: "pt-6"
     },
     {
       slug: "dungeon-master",
@@ -38,6 +38,36 @@ export default function PortfolioDashboard() {
       delay: "md:-mt-12"
     },
     {
+      slug: "demon",
+      title: "Neural Interface V4",
+      client: "Framestore",
+      category: "Characters",
+      description: "An exploration of sub-surface scattering and procedurally generated anatomy for digital humans.",
+      image: "/Portfolio/Demon/Demon_hero.jpg",
+      alt: "Demon Hero",
+      delay: ""
+    },
+    {
+      slug: "tokolosh",
+      title: "Mythic Creature",
+      client: "Personal Project",
+      category: "Characters",
+      description: "A creature design based on folklore.",
+      image: "/Portfolio/Tokolosh/01-tokolosh-close.jpg",
+      alt: "Tokolosh",
+      delay: "pt-12"
+    },
+    {
+      slug: "cat",
+      title: "Unit 7 Recon",
+      client: "Industrial Light & Magic",
+      category: "Characters",
+      description: "High-fidelity asset created for cinematic sequences using UDIM workflow and complex material layering.",
+      image: "/Portfolio/Cat/01-cat-monster.jpg",
+      alt: "Cat Monster",
+      delay: "md:-mt-12"
+    },
+    {
       slug: "legacy-of-adam",
       title: "Legacy of Adam",
       client: "Personal Project",
@@ -45,26 +75,6 @@ export default function PortfolioDashboard() {
       description: "Character collection for a narrative project.",
       image: "/Portfolio/Legacy-of-Adam/legacy-of-adam-eliab.jpg",
       alt: "Legacy of Adam",
-      delay: "pt-6"
-    },
-    {
-      slug: "marionette",
-      title: "Fluidity Study",
-      client: "Personal Project",
-      category: "Characters",
-      description: "Exploring organic movement within rigid digital constraints.",
-      image: "/Portfolio/Marionette/Marionette-hero.jpg",
-      alt: "Marionette",
-      delay: ""
-    },
-    {
-      slug: "potion-factory",
-      title: "Cortex Core",
-      client: "The Mill",
-      category: "Environments",
-      description: "Precision modeling project exploring Boolean workflows and non-destructive modeling techniques.",
-      image: "/Portfolio/Potion-Factory/CMatthee_PotionFactory_Beauty.jpg",
-      alt: "Potion Factory",
       delay: ""
     },
     {
@@ -75,26 +85,16 @@ export default function PortfolioDashboard() {
       description: "A study in brutalist architecture and scale, utilizing procedural displacement and custom photogrammetry.",
       image: "/Portfolio/Temple/01-temple.jpg",
       alt: "Temple",
-      delay: "pt-12"
+      delay: "pt-6"
     },
     {
-      slug: "tokolosh",
-      title: "Mythic Creature",
+      slug: "warrior",
+      title: "Warrior Study",
       client: "Personal Project",
       category: "Characters",
-      description: "A creature design based on folklore.",
-      image: "/Portfolio/Tokolosh/01-tokolosh-close.jpg",
-      alt: "Tokolosh",
-      delay: ""
-    },
-    {
-      slug: "witch",
-      title: "Obsidian Alley",
-      client: "Wētā FX",
-      category: "Characters",
-      description: "Detailed character study focusing on expressive lighting and materials.",
-      image: "/Portfolio/Witch/01-witch-close.jpg",
-      alt: "Witch",
+      description: "A detailed character study of a fallen warrior, focusing on anatomical realism and dramatic lighting.",
+      image: "/Portfolio/Warrior/01-warrior-close.jpg",
+      alt: "Warrior",
       delay: "md:-mt-12"
     }
   ];
