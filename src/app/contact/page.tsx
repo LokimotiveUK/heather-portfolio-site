@@ -21,8 +21,8 @@ export default function Contact() {
             <div className="lg:col-span-4 space-y-16">
               <div>
                 <h3 className="label-md uppercase tracking-[0.2em] text-primary mb-6">Direct Inquiry</h3>
-                <a className="text-xl md:text-2xl font-headline hover:text-primary transition-colors duration-300" href="mailto:heather@galerienoire.com">
-                  heather@galerienoire.com
+                <a className="text-xl md:text-2xl font-headline hover:text-primary transition-colors duration-300" href="mailto:heather.courage@gmail.com">
+                  heather.courage@gmail.com
                 </a>
               </div>
               <div>
