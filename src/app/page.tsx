@@ -24,7 +24,7 @@ export default function Home() {
       <section className="py-40 px-12 bg-surface">
         <div className="mb-24 flex justify-between items-baseline">
           <h2 className="font-headline text-4xl md:text-5xl text-on-surface">Selected Curation</h2>
-          <span className="font-body text-xs tracking-[0.5em] uppercase text-primary">Portfolio 2024</span>
+          <span className="font-body text-xs tracking-[0.5em] uppercase text-primary">Portfolio 2026</span>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-y-32 md:gap-x-12">
           {/* Large Feature Item */}

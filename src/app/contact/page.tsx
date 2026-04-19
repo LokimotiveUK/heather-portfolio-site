@@ -88,7 +88,7 @@ export default function Contact() {
             <div className="col-span-12 md:col-span-4 md:col-start-9">
               <h4 className="font-headline text-2xl mb-6">Current Availability</h4>
               <p className="text-on-surface-variant leading-relaxed">
-                Now accepting commissions for Q3 & Q4 2024. Current time zone: GMT+1. Please allow 48 hours for a response to detailed project briefs.
+                Now accepting commissions for Q2 & Q3 2026. Current time zone: GMT+1. Please allow 48 hours for a response to detailed project briefs.
               </p>
             </div>
           </div>
