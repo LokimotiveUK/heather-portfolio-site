@@ -5,9 +5,8 @@ import { HeroSlideshow } from "@/components/HeroSlideshow";
 export default function Home() {
   return (
     <>
-      {/* Hero Section — images are intentionally full-bleed (fill the viewport edge
-          to edge). Only the text overlay is constrained via the inner container. */}
-      <section className="relative h-screen w-full overflow-hidden -mt-[104px]">
+      {/* Hero Section */}
+      <section className="relative h-[calc(100vh-104px)] w-full overflow-hidden mt-[104px]">
         <div className="absolute inset-0 z-0">
           <HeroSlideshow />
         </div>

@@ -3,6 +3,7 @@ import { Noto_Serif, Manrope } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { Toaster } from "sonner";
 
 const notoSerif = Noto_Serif({
   variable: "--font-headline",
@@ -43,6 +44,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Toaster position="bottom-right" theme="dark" />
       </body>
     </html>
   );
