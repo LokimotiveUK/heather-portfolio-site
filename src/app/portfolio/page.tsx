@@ -19,12 +19,12 @@ export default function PortfolioDashboard() {
     },
     {
       slug: "witch",
-      title: "Witch",
+      title: "Witch of the Moon",
       client: "Personal Project",
       category: "Characters",
       description: "Detailed character study focusing on expressive lighting and materials.",
-      image: "/Portfolio/Witch/01-witch-close.jpg",
-      alt: "Witch",
+      image: "/Portfolio/updates/Witch Key Beauty.jpg",
+      alt: "Witch of the Moon",
       delay: "pt-6"
     },
     {
@@ -33,7 +33,7 @@ export default function PortfolioDashboard() {
       client: "Personal Project",
       category: "Characters",
       description: "A dark fantasy character concept.",
-      image: "/Portfolio/Dungeon Master/01-Dungeon-master-hero.jpg",
+      image: "/Portfolio/updates/DM Beauty.jpg",
       alt: "Dungeon Master",
       delay: "md:-mt-12"
     },
@@ -42,29 +42,29 @@ export default function PortfolioDashboard() {
       title: "Demoness",
       client: "Personal Project",
       category: "Characters",
-      description: "An exploration of sub-surface scattering and procedurally generated anatomy for digital humans.",
-      image: "/Portfolio/Demon/Demon_hero.jpg",
-      alt: "Demon Hero",
+      description: "Original Concept by Wu Shenyou. An exploration of sub-surface scattering and procedurally generated anatomy.",
+      image: "/Portfolio/updates/Demon Beauty 1.jpg",
+      alt: "Demoness",
       delay: ""
     },
     {
       slug: "tokolosh",
-      title: "Tokolosh",
+      title: "Tokoloshe",
       client: "Personal Project",
       category: "Characters",
       description: "A creature design based on folklore.",
-      image: "/Portfolio/Tokolosh/01-tokolosh-close.jpg",
-      alt: "Tokolosh",
+      image: "/Portfolio/updates/Toko Beauty.jpg",
+      alt: "Tokoloshe",
       delay: "pt-12"
     },
     {
       slug: "cat",
-      title: "Cat Boss",
+      title: "Wild Cat",
       client: "Personal Project",
       category: "Characters",
-      description: "High-fidelity asset created for cinematic sequences using UDIM workflow and complex material layering.",
-      image: "/Portfolio/Cat/01-cat-monster.jpg",
-      alt: "Cat Monster",
+      description: "Concept artist: Wu Shenyu. Creating monsters and magic.",
+      image: "/Portfolio/updates/CatBoss Beauty Shot.jpg",
+      alt: "Wild Cat",
       delay: "md:-mt-12"
     },
     {

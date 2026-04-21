@@ -73,13 +73,13 @@ export default function Home() {
             <Link href="/portfolio/witch" className="md:col-start-2 md:col-span-6 group cursor-crosshair block">
               <div className="overflow-hidden bg-surface-container-low">
                 <img
-                  alt="Witch"
+                  alt="Witch of the Moon"
                   className="w-full aspect-[3/2] object-cover object-[center_15%] grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out"
                   src="/Portfolio/Witch/01-witch-close.jpg"
                 />
               </div>
               <div className="mt-8">
-                <h3 className="font-headline text-2xl mb-2 group-hover:text-primary transition-colors duration-300">WITCH</h3>
+                <h3 className="font-headline text-2xl mb-2 group-hover:text-primary transition-colors duration-300">WITCH OF THE MOON</h3>
                 <p className="font-body text-sm text-on-surface-variant">Detailed character study focusing on expressive lighting and materials.</p>
               </div>
             </Link>
@@ -88,13 +88,13 @@ export default function Home() {
             <Link href="/portfolio/tokolosh" className="md:col-span-4 md:self-center group cursor-crosshair block">
               <div className="overflow-hidden bg-surface-container-low">
                 <img
-                  alt="Tokolosh"
+                  alt="Tokoloshe"
                   className="w-full aspect-square object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out"
                   src="/Portfolio/Tokolosh/01-tokolosh-close.jpg"
                 />
               </div>
               <div className="mt-8">
-                <h3 className="font-headline text-2xl mb-2 group-hover:text-primary transition-colors duration-300">TOKOLOSH</h3>
+                <h3 className="font-headline text-2xl mb-2 group-hover:text-primary transition-colors duration-300">TOKOLOSHE</h3>
                 <p className="font-body text-sm text-on-surface-variant">A creature design based on folklore.</p>
               </div>
             </Link>

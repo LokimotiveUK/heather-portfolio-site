@@ -1,205 +1,222 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { OptimizedVideo } from "@/components/OptimizedVideo";
 
 // Mock data for the dynamic pages
 const projectsData: Record<string, any> = {
   "temple": {
-    title: "Temple",
+    title: "The Temple",
     client: "Personal Project",
     category: "Environments",
     year: "2024",
-    tris: "142K TRIS",
-    textures: "5x 4K PBR",
-    workflow: "UDIM / ACES",
-    software: ["ZBrush", "Maya", "Substance"],
-    description: "An exploration of silent lethality. The vision was to create a silhouette that feels both monolithic and agile, drawing inspiration from predatory anatomy and brutalist architecture.",
-    phase1: "High-fidelity sculpting performed in ZBrush. Emphasis on anatomical accuracy beneath the hard-surface components to ensure realistic deformation during animation.",
-    phase2: "Retopology focused on edge-flow for cinematic rigging. The mesh is optimized for sub-division surfaces while maintaining a manageable base-poly count.",
-    phase3: "Material definition via Substance Painter. We utilized a layered shader approach: a base obsidian ceramic, topped with a metallic gold leaf, finished with a procedural dust and wear layer.",
-    heroImage: "/Portfolio/Temple/01-temple.jpg",
-    detailImage1: "/Portfolio/Temple/02-temple.jpg",
-    detailImage2: "/Portfolio/Temple/03-temple.jpg",
-    detailImage3: "/Portfolio/Temple/04-temple.jpg",
-    breakdown1: "/Portfolio/Temple/05-temple.jpg",
-    breakdown2: "/Portfolio/Temple/06-temple.jpg",
-    breakdown3: "/Portfolio/Temple/07-temple.jpg",
-    breakdown4: "/Portfolio/Temple/01-temple.jpg"
+    tris: "Mixed",
+    textures: "4 x 2k",
+    workflow: "Environment / Game / PBR",
+    software: ["ZBrush", "Maya", "Substance Painter", "Rizom UV", "Marmoset Toolbag", "Photoshop"],
+    description: "Tranquility is a state of mind",
+    phase1: "Key assets were sculpted in Zbrush before being retopologised in Maya for the final composition",
+    phase2: "Topology focussed on reducing the poly count to optimise each asset for game implementation",
+    phase3: "Material definition though Substance painter. PBR flow with hand painted details",
+    renderText: "Utilisation of Marmoset's Lighting Material set ups to add depth to the image",
+    heroImage: "/Portfolio/updates/Temple Beauty.jpg",
+    detailImage1: "/Portfolio/updates/Temple Close1.jpg",
+    detailImage2: "/Portfolio/updates/Temple close2.jpg",
+    detailImage3: "/Portfolio/updates/Temple close3.jpg",
+    breakdown1: "/Portfolio/updates/Temple Wire.jpg",
+    breakdown2: "/Portfolio/updates/Temple Wirefame3.jpg",
+    breakdown3: "/Portfolio/updates/Temple Albedo.jpg",
+    breakdown4: "/Portfolio/updates/Temple Normals.jpg",
+    renderImg: "/Portfolio/updates/Temple marmoset view.jpg",
+    video: "Temple Vid"
   },
   "demon": {
     title: "Demoness",
     client: "Personal Project",
     category: "Characters",
-    year: "2023",
-    tris: "85K TRIS",
-    textures: "3x 4K PBR",
-    workflow: "Standard",
-    software: ["Maya", "Houdini"],
-    description: "A demon-inspired neural interface.",
-    phase1: "Concept and base blockout.",
+    year: "2024",
+    tris: "25k quads",
+    textures: "6x2k",
+    workflow: "PBR / Game",
+    software: ["ZBrush", "Maya", "Substance Painter", "Rizom UV", "Marmoset Toolbag"],
+    description: "Original Concept by Wu Shenyou",
+    phase1: "Shape and silhouette",
     phase2: "Refining the mechanical and organic integration.",
-    phase3: "Final lookdev and compositing.",
-    heroImage: "/Portfolio/Demon/Demon_hero.jpg",
-    detailImage1: "/Portfolio/Demon/Demon_face.jpg",
-    detailImage2: "/Portfolio/Demon/Demon_side.jpg",
-    detailImage3: "/Portfolio/Demon/Demon_book.jpg",
-    breakdown1: "/Portfolio/Demon/Demon_sculpt1.jpg",
-    breakdown2: "/Portfolio/Demon/Demon_retopo.jpg",
-    breakdown3: "/Portfolio/Demon/Demon_substance1.jpg",
-    breakdown4: "/Portfolio/Demon/Demon_uv.jpg"
+    phase3: "Look dev through procedure",
+    renderText: "Final lighting and composition",
+    heroImage: "/Portfolio/updates/Demon Beauty 1.jpg",
+    detailImage1: "/Portfolio/updates/Demon close1.jpg",
+    detailImage2: "/Portfolio/updates/Demon close 2.jpg",
+    detailImage3: "/Portfolio/updates/Demon close 2.jpg",
+    breakdown1: "/Portfolio/updates/Demon Sculpt 1.jpg",
+    breakdown2: "/Portfolio/updates/Demon WIre.jpg",
+    breakdown3: "/Portfolio/updates/Demon Map 2.jpg",
+    breakdown4: "/Portfolio/updates/Demon MAp1.jpg",
+    renderImg: "/Portfolio/updates/Demon Render.jpg",
+    video: "Demon Beauty"
   },
   "witch": {
-    title: "Witch",
+    title: "Witch of the Moon",
     client: "Personal Project",
     category: "Characters",
-    year: "2022",
-    tris: "2M TRIS",
-    textures: "10x 4K PBR",
-    workflow: "UDIM",
-    software: ["Unreal Engine", "Maya"],
+    year: "2025",
+    tris: "50k Poly",
+    textures: "5 x 4k",
+    workflow: "PBR / Game",
+    software: ["ZBrush", "Maya", "Substance Painter", "Rizom UV", "Marmoset Toolbag"],
     description: "Detailed character study focusing on expressive lighting and materials.",
-    phase1: "Layout and blocking.",
-    phase2: "Asset creation and placement.",
-    phase3: "Lighting and atmospheric effects.",
-    heroImage: "/Portfolio/Witch/01-witch-close.jpg",
-    detailImage1: "/Portfolio/Witch/02-witch-full-body.jpg",
+    phase1: "from block out to detail",
+    phase2: "game model optimisation with focus on baked in details",
+    phase3: "Material definition and PBR workflow.",
+    renderText: "Rendering in Marmoset Toolbag",
+    heroImage: "/Portfolio/updates/Witch Key Beauty.jpg",
+    detailImage1: "/Portfolio/updates/Witch close1.jpg",
     detailImage2: "/Portfolio/Witch/03-witch-torso.jpg",
     detailImage3: "/Portfolio/Witch/04-witch-side.jpg",
-    breakdown1: "/Portfolio/Witch/10-witch-sculpt.jpg",
-    breakdown2: "/Portfolio/Witch/07-witch-mesh.jpg",
-    breakdown3: "/Portfolio/Witch/05-witch-maps1.jpg",
-    breakdown4: "/Portfolio/Witch/08-witch-marmoset-screen.jpg"
+    breakdown1: "/Portfolio/updates/Witch Sculpt.jpg",
+    breakdown2: "/Portfolio/updates/Witch WireFrame.jpg",
+    breakdown3: "/Portfolio/updates/Witch Maps2.jpg",
+    breakdown4: "/Portfolio/updates/Witch Maps1.jpg",
+    renderImg: "/Portfolio/updates/Marmoset Screen.jpg",
+    video: "Witch Witch Turn"
   },
   "legacy-of-adam": {
     title: "Legacy of Adam",
-    client: "Personal Project",
+    client: "Client Project - released",
     category: "Characters",
     year: "2024",
-    tris: "120K TRIS",
-    textures: "4x 4K PBR",
-    workflow: "Standard",
-    software: ["ZBrush", "Substance"],
-    description: "Character collection for a narrative project.",
-    phase1: "Primary forms and silhouette.",
-    phase2: "Secondary details and surface texture.",
-    phase3: "Material separation and final rendering.",
+    tris: "Ranged",
+    textures: "1 to 2",
+    workflow: "Cinematic / UDIM",
+    software: ["ZBrush", "Marvelous Designer", "Substance Painter", "Maya"],
+    description: "Sculpting and Look Development Credit. This is a selection of the clothing items made for this semi-stylised series created for a rural African youth audience. Clothing was sculpted in Zbrush and Marvellous designer before being UV'd in Maya and Textured in Substance Painter.",
     heroImage: "/Portfolio/Legacy-of-Adam/legacy-of-adam-eliab.jpg",
     detailImage1: "/Portfolio/Legacy-of-Adam/legacy-of-adam-fatguy.jpg",
     detailImage2: "/Portfolio/Legacy-of-Adam/legacy-of-adam-jonothan.jpg",
     detailImage3: "/Portfolio/Legacy-of-Adam/legacy-of-adam-joseph.jpg",
-    breakdown1: "/Portfolio/Legacy-of-Adam/legacy-of-adam-judas.jpg",
-    breakdown2: "/Portfolio/Legacy-of-Adam/legacy-of-adam-npc91.jpg",
-    breakdown3: "/Portfolio/Legacy-of-Adam/legacy-of-adam-pharisee.jpg",
-    breakdown4: "/Portfolio/Legacy-of-Adam/legacy-of-adam-priestofherod.jpg"
   },
   "marionette": {
     title: "Marionette",
     client: "Personal Project",
     category: "Characters",
     year: "2023",
-    tris: "50K TRIS",
-    textures: "1x 4K PBR",
+    tris: "41k Poly",
+    textures: "4x2k",
     workflow: "Procedural",
-    software: ["Houdini", "Redshift"],
-    description: "Exploring organic movement within rigid digital constraints.",
-    phase1: "Procedural setup and simulation.",
-    phase2: "Cache and mesh generation.",
-    phase3: "Shading and rendering.",
-    heroImage: "/Portfolio/Marionette/Marionette-hero.jpg",
-    detailImage1: "/Portfolio/Marionette/Marionette1.jpg",
-    detailImage2: "/Portfolio/Marionette/Marionette2.jpg",
-    detailImage3: "/Portfolio/Marionette/Marionette3.jpg",
-    breakdown1: "/Portfolio/Marionette/Marionette-sculpt.jpg",
-    breakdown2: "/Portfolio/Marionette/Marionette-wireframe.jpg",
-    breakdown3: "/Portfolio/Marionette/Marionette-mix.jpg",
-    breakdown4: "/Portfolio/Marionette/Marionette-clay-render.jpg"
+    software: ["ZBrush", "Maya", "Substance Painter", "Rizom UV", "Marmoset Toolbag 5"],
+    description: "Concept by Katherine Bartlett. Exploring organic movement within rigid digital constraints.",
+    phase1: "digital sculpting",
+    phase2: "game model optimisation suitable for animations",
+    phase3: "with hand painted elements",
+    renderText: "Rendered in Marmoset toolbag",
+    heroImage: "/Portfolio/updates/MB Key Beauty Shot.jpg",
+    detailImage1: "/Portfolio/updates/MB Close1.jpg",
+    detailImage2: "/Portfolio/updates/MB Close2.jpg",
+    detailImage3: "/Portfolio/updates/MB Close2.jpg",
+    breakdown1: "/Portfolio/updates/MB sculpt Primary.jpg",
+    breakdown2: "/Portfolio/updates/MB WF1.jpg",
+    breakdown3: "/Portfolio/updates/MB Maps1.jpg",
+    breakdown4: "/Portfolio/updates/MB Maps2.jpg",
+    renderImg: "/Portfolio/updates/MB Viewport.jpg",
+    video: "MB Video1",
+    video2: "MB Video2"
   },
   "warrior": {
-    title: "Warrior",
+    title: "The Warrior",
     client: "Personal Project",
     category: "Characters",
-    year: "2024",
-    tris: "65K TRIS",
-    textures: "2x 4K PBR",
-    workflow: "Standard",
-    software: ["ZBrush", "Substance Painter"],
-    description: "A detailed character study of a fallen warrior, focusing on anatomical realism and dramatic lighting.",
-    phase1: "High-resolution character sculpting emphasizing facial expression and pose.",
-    phase2: "Low-poly retopology and efficient UV unwrapping.",
-    phase3: "Texturing with a focus on skin detail and dirt accumulation.",
-    heroImage: "/Portfolio/Warrior/01-warrior-close.jpg",
-    detailImage1: "/Portfolio/Warrior/02-warrior-full.jpg",
-    detailImage2: "/Portfolio/Warrior/03-warrior-dead-clay.jpg",
-    detailImage3: "/Portfolio/Warrior/04-warrior-full-clay.jpg",
-    breakdown1: "/Portfolio/Warrior/05-warrior-render1.jpg",
-    breakdown2: "/Portfolio/Warrior/06-warrior-render2.jpg",
-    breakdown3: "/Portfolio/Warrior/07-warrior-render3.jpg",
-    breakdown4: "/Portfolio/Warrior/08-warrior-render4.jpg"
+    year: "2023",
+    tris: "35k Quads",
+    textures: "4x2k",
+    workflow: "Game / PBR",
+    software: ["ZBrush", "Maya", "Substance Painter", "Rizom UV", "Marmoset Toolbag"],
+    description: "Character creation in the style of Overwatch",
+    phase1: "Digital Sculpting",
+    phase2: "Retopo/ UV",
+    phase3: "PBR Texturing",
+    renderText: "Rendering",
+    heroImage: "/Portfolio/updates/War Beauty.jpg",
+    detailImage1: "/Portfolio/updates/war close1.png",
+    detailImage2: "/Portfolio/updates/War close 2.png",
+    detailImage3: "/Portfolio/updates/War close 3.jpg",
+    breakdown1: "/Portfolio/updates/war sculpt.png",
+    breakdown2: "/Portfolio/updates/war wireframe.jpg",
+    breakdown3: "/Portfolio/updates/war textures.jpg",
+    breakdown4: "/Portfolio/updates/war textures.jpg",
+    renderImg: "/Portfolio/updates/Warrior render .png",
+    video: "war turn"
   },
   "cat": {
-    title: "Cat Boss",
+    title: "Wild Cat",
     client: "Personal Project",
     category: "Characters",
     year: "2024",
-    tris: "142K TRIS",
-    textures: "5x 4K PBR",
-    workflow: "UDIM / ACES",
-    software: ["ZBrush", "Maya", "Substance"],
-    description: "High-fidelity asset created for cinematic sequences using UDIM workflow and complex material layering.",
-    phase1: "Concept to 3D blockout.",
-    phase2: "High poly sculpting and detailing.",
-    phase3: "Retopology, UVs, and final textures.",
-    heroImage: "/Portfolio/Cat/01-cat-monster.jpg",
-    detailImage1: "/Portfolio/Cat/02-cat-monster.jpg",
-    detailImage2: "/Portfolio/Cat/03-cat-monster.jpg",
-    detailImage3: "/Portfolio/Cat/04-cat-monster.jpg",
-    breakdown1: "/Portfolio/Cat/05-cat-monster.jpg",
-    breakdown2: "/Portfolio/Cat/06-cat-monster.jpg",
-    breakdown3: "/Portfolio/Cat/07-cat-monster.jpg",
-    breakdown4: "/Portfolio/Cat/01-cat-monster.jpg"
+    tris: "50k poly",
+    textures: "4x2k",
+    workflow: "Printing / Cinematic",
+    software: ["ZBrush", "Maya", "Substance Painter", "Rizom UV", "Marmoset Toolbag", "Fibreshop"],
+    description: "Concept artist: Wu Shenyu. Creating monsters and magic",
+    phase1: "concept to 3d",
+    phase2: "Made for Printing",
+    phase3: "adding flair",
+    renderText: "lights, camera, action",
+    heroImage: "/Portfolio/updates/CatBoss Beauty Shot.jpg",
+    detailImage1: "/Portfolio/updates/Cat Close1.jpg",
+    detailImage2: "/Portfolio/updates/Cat CLose 2.jpg",
+    detailImage3: "/Portfolio/updates/Cat Close 3.jpg",
+    breakdown1: "/Portfolio/updates/Cat Sculpt 1.jpg",
+    breakdown2: "/Portfolio/updates/Cat Wire.jpg",
+    breakdown3: "/Portfolio/updates/Cat PBR.jpg",
+    breakdown4: "/Portfolio/updates/Cat PBR.jpg",
+    renderImg: "/Portfolio/updates/Cat Render.jpg",
+    video: "WildCat Turn"
   },
   "dungeon-master": {
     title: "Dungeon Master",
     client: "Personal Project",
     category: "Characters",
-    year: "2023",
-    tris: "95K TRIS",
+    year: "2025",
+    tris: "40k Poly",
     textures: "4x 4K PBR",
-    workflow: "Standard",
-    software: ["ZBrush", "Marvelous Designer"],
+    workflow: "PBR / Game",
+    software: ["ZBrush", "Maya", "Substance Painter", "Rizom UV", "Marmoset Toolbag"],
     description: "A dark fantasy character concept.",
-    phase1: "Anatomy study.",
-    phase2: "Cloth simulation.",
-    phase3: "Final detailing.",
-    heroImage: "/Portfolio/Dungeon Master/01-Dungeon-master-hero.jpg",
-    detailImage1: "/Portfolio/Dungeon Master/02-Dungeon-master-head.jpg",
-    detailImage2: "/Portfolio/Dungeon Master/03-Dungeon-master-torso.jpg",
-    detailImage3: "/Portfolio/Dungeon Master/05-Dungeon-master-skull-1.jpg",
-    breakdown1: "/Portfolio/Dungeon Master/09-Dungeon-master-sculpt-1.jpg",
-    breakdown2: "/Portfolio/Dungeon Master/14-Dungeon-master-wireframe.jpg",
-    breakdown3: "/Portfolio/Dungeon Master/12-Dungeon-master-maps-1.jpg",
-    breakdown4: "/Portfolio/Dungeon Master/20-Dungeon-master-marmoset.jpg"
+    phase1: "Capturing the characters form and silhouette",
+    phase2: "Optimising for game, while keeping animation principles in mind",
+    phase3: "with hand painted details",
+    heroImage: "/Portfolio/updates/DM Beauty.jpg",
+    detailImage1: "/Portfolio/updates/DM Close1.jpg",
+    detailImage2: "/Portfolio/Dungeon Master/02-Dungeon-master-head.jpg",
+    detailImage3: "/Portfolio/Dungeon Master/03-Dungeon-master-torso.jpg",
+    breakdown1: "/Portfolio/updates/DM Sclpt1.jpg",
+    breakdown2: "/Portfolio/updates/DM UVs.jpg",
+    breakdown3: "/Portfolio/updates/DM Maps1.jpg",
+    breakdown4: "/Portfolio/updates/DM Maps2.jpg",
+    video: "DM Turn"
   },
   "tokolosh": {
-    title: "Tokolosh",
+    title: "Tokoloshe",
     client: "Personal Project",
     category: "Characters",
     year: "2024",
-    tris: "110K TRIS",
-    textures: "6x 4K PBR",
-    workflow: "UDIM",
-    software: ["ZBrush", "Mari"],
+    tris: "35k Poly",
+    textures: "4x2k",
+    workflow: "PBR / Game optimised",
+    software: ["ZBrush", "Maya", "Substance Painter", "Rizom UV", "Marmoset Toolbag", "Fibreshop"],
     description: "A creature design based on folklore.",
-    phase1: "Base mesh and proportions.",
-    phase2: "Skin detailing and alphas.",
-    phase3: "Texture painting.",
-    heroImage: "/Portfolio/Tokolosh/01-tokolosh-close.jpg",
-    detailImage1: "/Portfolio/Tokolosh/02-tokolosh-face.jpg",
-    detailImage2: "/Portfolio/Tokolosh/03-tokolosh-body.jpg",
-    detailImage3: "/Portfolio/Tokolosh/01-tokolosh-close.jpg",
-    breakdown1: "/Portfolio/Tokolosh/07-tokolosh-head-sculpt.jpg",
-    breakdown2: "/Portfolio/Tokolosh/11-tokolosh-paint-map.jpg",
-    breakdown3: "/Portfolio/Tokolosh/12-tokolosh-workspace.jpg",
-    breakdown4: "/Portfolio/Tokolosh/02-tokolosh-face.jpg"
+    phase1: "Building the proportions to creating the details",
+    phase2: "Low poly, high baked details",
+    phase3: "Bringin it to life through PBR pipelines",
+    renderText: "Lighting the monster",
+    heroImage: "/Portfolio/updates/Toko Beauty.jpg",
+    detailImage1: "/Portfolio/updates/Toko Close 1.jpg",
+    detailImage2: "/Portfolio/updates/Toko Close 2.jpg",
+    detailImage3: "/Portfolio/updates/Toko Close 3.jpg",
+    breakdown1: "/Portfolio/updates/Toko Wire.jpg",
+    breakdown2: "/Portfolio/updates/Toko UV.jpg",
+    breakdown3: "/Portfolio/updates/Toko Maps.jpg",
+    breakdown4: "/Portfolio/updates/Toko Maps.jpg",
+    renderImg: "/Portfolio/updates/Toko Render.jpg",
+    video: "Toko Turn"
   }
 };
 
@@ -212,14 +229,12 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
   }
 
   const { heroImage, detailImage1, detailImage2, detailImage3, breakdown1, breakdown2, breakdown3, breakdown4 } = project;
+  const isLegacyOfAdam = resolvedParams.slug === "legacy-of-adam";
 
   return (
     <div className="overflow-x-hidden pt-20">
       {/* Hero Section */}
       <header className="relative h-screen w-full flex items-end overflow-hidden bg-[#131313]">
-        {/* Image is capped at 1920 px and centred. On ultra-wide displays the dark
-            background fills the flanking areas, keeping the subject framing identical
-            to what is seen on a standard 1080p / 1440p display. */}
         <div className="absolute inset-0 flex justify-center">
           <div className="relative w-full max-w-[1920px] h-full">
             <img alt={project.title} className="absolute inset-0 w-full h-full object-cover" src={heroImage} id="hero-img" />
@@ -236,7 +251,7 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
             <p className="font-label text-on-surface-variant uppercase text-xs tracking-wide mb-2">Client</p>
             <p className="font-headline text-2xl text-primary">{project.client}</p>
           </div>
-          </div>{/* end max-w inner container */}
+          </div>
         </div>
       </header>
 
@@ -247,7 +262,7 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
             <div className="md:col-span-4 sticky top-40">
               <h2 className="font-headline text-5xl font-bold mb-8 leading-tight">The<br />Craft</h2>
               <div className="w-12 h-[1px] bg-primary mb-8"></div>
-              <p className="font-body text-on-surface-variant leading-relaxed text-lg">
+              <p className="font-body text-on-surface-variant leading-relaxed text-lg whitespace-pre-line">
                 {project.description}
               </p>
             </div>
@@ -268,95 +283,119 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
         </div>
       </section>
 
-      {/* Specs Section */}
-      <section className="py-24 bg-surface-container-lowest">
-        <div className="max-w-[1400px] mx-auto px-12">
-          <div className="flex flex-col md:flex-row justify-between items-center border-y border-outline-variant/20 py-16 gap-12">
-            <div className="text-center md:text-left">
-              <p className="font-label text-on-surface-variant text-[10px] tracking-widest uppercase mb-2">Complexity</p>
-              <p className="font-headline text-3xl text-primary">{project.tris}</p>
-            </div>
-            <div className="text-center md:text-left">
-              <p className="font-label text-on-surface-variant text-[10px] tracking-widest uppercase mb-2">Texture Sets</p>
-              <p className="font-headline text-3xl text-primary">{project.textures}</p>
-            </div>
-            <div className="text-center md:text-left">
-              <p className="font-label text-on-surface-variant text-[10px] tracking-widest uppercase mb-2">Workflow</p>
-              <p className="font-headline text-3xl text-primary">{project.workflow}</p>
-            </div>
-            <div className="text-center md:text-left">
-              <p className="font-label text-on-surface-variant text-[10px] tracking-widest uppercase mb-2">Software</p>
-              <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-2">
-                {project.software.map((sw: string) => (
-                  <span key={sw} className="px-3 py-1 bg-surface-container-highest text-[10px] font-label uppercase tracking-wide text-on-surface">{sw}</span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Technical Breakdown */}
-      <section className="py-40 bg-surface">
-        <div className="max-w-[1400px] mx-auto px-12">
-          <h2 className="font-headline text-5xl font-bold mb-24 text-center">Technical Breakdown</h2>
-          <div className="space-y-40">
-            {/* Sculpting */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
-              <div>
-                <span className="font-label text-primary-container text-xs tracking-widest uppercase mb-4 block">Phase 01</span>
-                <h3 className="font-headline text-4xl mb-6">Digital Sculpting</h3>
-                <p className="font-body text-on-surface-variant leading-relaxed">
-                  {project.phase1}
-                </p>
-              </div>
-              <div className="aspect-square bg-surface-container">
-                <img alt="Clay render" className="w-full h-full object-cover" src={breakdown1} id="breakdown-img-1" />
-              </div>
-            </div>
-            {/* Topology & UVs */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
-              <div className="order-2 md:order-1 aspect-square bg-surface-container">
-                <img alt="Wireframe" className="w-full h-full object-cover opacity-50" src={breakdown2} id="breakdown-img-2" />
-              </div>
-              <div className="order-1 md:order-2">
-                <span className="font-label text-primary-container text-xs tracking-widest uppercase mb-4 block">Phase 02</span>
-                <h3 className="font-headline text-4xl mb-6">Topology & UVs</h3>
-                <p className="font-body text-on-surface-variant leading-relaxed">
-                  {project.phase2}
-                </p>
-              </div>
-            </div>
-            {/* Texturing */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
-              <div>
-                <span className="font-label text-primary-container text-xs tracking-widest uppercase mb-4 block">Phase 03</span>
-                <h3 className="font-headline text-4xl mb-6">PBR Texturing</h3>
-                <p className="font-body text-on-surface-variant leading-relaxed">
-                  {project.phase3}
-                </p>
-              </div>
-              <div className="grid grid-cols-2 gap-4 aspect-square">
-                <div className="bg-surface-container-high flex items-center justify-center p-8">
-                  <div className="w-full aspect-square rounded-full shadow-2xl overflow-hidden">
-                    <img alt="Material Sphere" className="w-full h-full object-cover" src={breakdown3} id="breakdown-img-3" />
+      {!isLegacyOfAdam && (
+        <>
+          {/* Specs Section */}
+          <section className="py-24 bg-surface-container-lowest">
+            <div className="max-w-[1400px] mx-auto px-12">
+              <div className="flex flex-col md:flex-row justify-between items-center border-y border-outline-variant/20 py-16 gap-12">
+                <div className="text-center md:text-left">
+                  <p className="font-label text-on-surface-variant text-[10px] tracking-widest uppercase mb-2">Complexity</p>
+                  <p className="font-headline text-3xl text-primary">{project.tris}</p>
+                </div>
+                <div className="text-center md:text-left">
+                  <p className="font-label text-on-surface-variant text-[10px] tracking-widest uppercase mb-2">Texture Sets</p>
+                  <p className="font-headline text-3xl text-primary">{project.textures}</p>
+                </div>
+                <div className="text-center md:text-left">
+                  <p className="font-label text-on-surface-variant text-[10px] tracking-widest uppercase mb-2">Workflow</p>
+                  <p className="font-headline text-3xl text-primary">{project.workflow}</p>
+                </div>
+                <div className="text-center md:text-left">
+                  <p className="font-label text-on-surface-variant text-[10px] tracking-widest uppercase mb-2">Software</p>
+                  <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-2">
+                    {project.software.map((sw: string) => (
+                      <span key={sw} className="px-3 py-1 bg-surface-container-highest text-[10px] font-label uppercase tracking-wide text-on-surface">{sw}</span>
+                    ))}
                   </div>
                 </div>
-                <div className="col-span-2 bg-surface-container-high overflow-hidden">
-                  <img alt="Macro texture" className="w-full h-full object-cover" src={breakdown4} id="breakdown-img-4" />
-                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
+
+          {/* Technical Breakdown */}
+          <section className="py-40 bg-surface">
+            <div className="max-w-[1400px] mx-auto px-12">
+              <h2 className="font-headline text-5xl font-bold mb-24 text-center">Technical Breakdown</h2>
+              <div className="space-y-40">
+                {/* Sculpting */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+                  <div>
+                    <span className="font-label text-primary-container text-xs tracking-widest uppercase mb-4 block">Phase 01</span>
+                    <h3 className="font-headline text-4xl mb-6">Digital Sculpting</h3>
+                    <p className="font-body text-on-surface-variant leading-relaxed">
+                      {project.phase1}
+                    </p>
+                  </div>
+                  <div className="aspect-square bg-surface-container">
+                    <img alt="Clay render" className="w-full h-full object-cover" src={breakdown1} id="breakdown-img-1" />
+                  </div>
+                </div>
+                {/* Topology & UVs */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+                  <div className="order-2 md:order-1 aspect-square bg-surface-container">
+                    <img alt="Wireframe" className="w-full h-full object-cover opacity-50" src={breakdown2} id="breakdown-img-2" />
+                  </div>
+                  <div className="order-1 md:order-2">
+                    <span className="font-label text-primary-container text-xs tracking-widest uppercase mb-4 block">Phase 02</span>
+                    <h3 className="font-headline text-4xl mb-6">Topology & UVs</h3>
+                    <p className="font-body text-on-surface-variant leading-relaxed">
+                      {project.phase2}
+                    </p>
+                  </div>
+                </div>
+                {/* Texturing */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+                  <div>
+                    <span className="font-label text-primary-container text-xs tracking-widest uppercase mb-4 block">Phase 03</span>
+                    <h3 className="font-headline text-4xl mb-6">PBR Texturing</h3>
+                    <p className="font-body text-on-surface-variant leading-relaxed">
+                      {project.phase3}
+                    </p>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4 aspect-square">
+                    <div className="bg-surface-container-high flex items-center justify-center p-8">
+                      <div className="w-full aspect-square rounded-full shadow-2xl overflow-hidden">
+                        <img alt="Material Sphere" className="w-full h-full object-cover" src={breakdown3} id="breakdown-img-3" />
+                      </div>
+                    </div>
+                    <div className="col-span-2 bg-surface-container-high overflow-hidden">
+                      <img alt="Macro texture" className="w-full h-full object-cover" src={breakdown4} id="breakdown-img-4" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Optional Rendering / Video Showcase */}
+                {(project.renderImg || project.video) && (
+                  <div className="pt-24 border-t border-outline-variant/10">
+                    <div className="text-center mb-16">
+                      <span className="font-label text-primary-container text-xs tracking-widest uppercase mb-4 block">Final Showcase</span>
+                      <h3 className="font-headline text-4xl mb-6">{project.renderText || "Rendering & Turntable"}</h3>
+                    </div>
+                    <div className="space-y-12">
+                      {project.renderImg && (
+                        <div className="w-full aspect-[16/9] bg-surface-container">
+                          <img alt="Final Render" className="w-full h-full object-cover" src={project.renderImg} />
+                        </div>
+                      )}
+                      {project.video && (
+                        <OptimizedVideo slug={project.video} title={project.title} />
+                      )}
+                      {project.video2 && (
+                        <OptimizedVideo slug={project.video2} title={project.title} />
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </section>
+        </>
+      )}
 
       {/* Next Project Navigation */}
       <section className="border-t border-outline-variant/10">
         <Link className="group relative block w-full py-48 overflow-hidden bg-surface-container-lowest text-center" href="/portfolio">
-          <div className="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity duration-700">
-            <img alt="Next project preview" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrBjcLzpCz87KOs6Oh_PH-9doS_g1L7FaAkcBUSqpD1vf4ec9Tg-FblfWL2QIudclKHK7eBfBNO18j5sE0ln-hlQs62Q4a-NyxycBGXEZUABVv3oEIUqzNW7r8sKXDuSNvpZRsELh8kvxFJScD28ZbVH3kLi_o9pfPvwP4nMFcP5cj3gceLM2fJt2_yK8keGfvrJGZEUCk87G5u7ozVa8UIuFHdtTw9bfwZgeKfyMsVCnhpSbtDYeJ9fV3PWalqW-m7mOMi0DU7nU" />
-          </div>
           <div className="relative z-10">
             <span className="font-label text-on-surface-variant text-xs tracking-widest uppercase mb-4 block">Return</span>
             <h4 className="font-headline text-6xl md:text-8xl font-bold tracking-tighter text-on-surface group-hover:text-primary transition-colors duration-500">BACK TO PORTFOLIO</h4>
