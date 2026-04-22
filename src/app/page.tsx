@@ -38,7 +38,7 @@ export default function Home() {
               <div className="overflow-hidden bg-surface-container-low transition-colors duration-500 group-hover:bg-surface-container-high">
                 <img
                   alt="Marionette"
-                  className="w-full aspect-[16/9] object-cover object-[center_15%] grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out"
+                  className="w-full aspect-[16/9] object-cover object-[center_40%] grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out"
                   src="/Portfolio/updates/MB Key Beauty Shot.jpg"
                 />
               </div>

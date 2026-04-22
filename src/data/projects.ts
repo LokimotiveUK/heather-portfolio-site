@@ -45,7 +45,7 @@ export const projects: Record<string, Project> = {
     workflow: "PBR / Game",
     software: ["ZBrush", "Maya", "Substance Painter", "Rizom UV", "Marmoset Toolbag 5"],
     description: "Concept by Katherine Bartlett.",
-    hero: { src: "/Portfolio/updates/MB Key Beauty Shot.jpg", width: 2275, height: 3360, focal: "center 20%" },
+    hero: { src: "/Portfolio/updates/MB Key Beauty Shot.jpg", width: 2275, height: 3360, focal: "center 40%" },
     craftRows: [
       [
         img("/Portfolio/updates/MB Close1.jpg", 2275, 3360),
