@@ -12,8 +12,8 @@ export default function PortfolioDashboard() {
       title: "Marionette",
       client: "Personal Project",
       category: "Characters",
-      description: "Exploring organic movement within rigid digital constraints.",
-      image: "/Portfolio/Marionette/Marionette-hero.jpg",
+      description: "Concept by Katherine Bartlett.",
+      image: "/Portfolio/updates/MB Key Beauty Shot.jpg",
       alt: "Marionette",
       delay: ""
     },
@@ -22,7 +22,7 @@ export default function PortfolioDashboard() {
       title: "Witch of the Moon",
       client: "Personal Project",
       category: "Characters",
-      description: "Detailed character study focusing on expressive lighting and materials.",
+      description: "Detailed character study focused on expressive lighting and layered materials.",
       image: "/Portfolio/updates/Witch Key Beauty.jpg",
       alt: "Witch of the Moon",
       delay: "pt-6"
@@ -42,7 +42,7 @@ export default function PortfolioDashboard() {
       title: "Demoness",
       client: "Personal Project",
       category: "Characters",
-      description: "Original Concept by Wu Shenyou. An exploration of sub-surface scattering and procedurally generated anatomy.",
+      description: "Original concept by Wu Shenyou.",
       image: "/Portfolio/updates/Demon Beauty 1.jpg",
       alt: "Demoness",
       delay: ""
@@ -52,7 +52,7 @@ export default function PortfolioDashboard() {
       title: "Tokoloshe",
       client: "Personal Project",
       category: "Characters",
-      description: "A creature design based on folklore.",
+      description: "A creature design based on Southern African folklore.",
       image: "/Portfolio/updates/Toko Beauty.jpg",
       alt: "Tokoloshe",
       delay: "pt-12"
@@ -62,7 +62,7 @@ export default function PortfolioDashboard() {
       title: "Wild Cat",
       client: "Personal Project",
       category: "Characters",
-      description: "Concept artist: Wu Shenyu. Creating monsters and magic.",
+      description: "Concept by Wu Shenyou. Creating monsters and magic.",
       image: "/Portfolio/updates/CatBoss Beauty Shot.jpg",
       alt: "Wild Cat",
       delay: "md:-mt-12"
@@ -70,30 +70,30 @@ export default function PortfolioDashboard() {
     {
       slug: "legacy-of-adam",
       title: "Legacy of Adam",
-      client: "Personal Project",
+      client: "Client Project — Released",
       category: "Characters",
-      description: "Character collection for a narrative project.",
+      description: "Industry credit — Sculpting and Look Development for a semi-stylised cinematic series.",
       image: "/Portfolio/Legacy-of-Adam/legacy-of-adam-eliab.jpg",
       alt: "Legacy of Adam",
       delay: ""
     },
     {
       slug: "temple",
-      title: "Temple",
+      title: "The Temple",
       client: "Personal Project",
       category: "Environments",
-      description: "A study in brutalist architecture and scale, utilizing procedural displacement and custom photogrammetry.",
-      image: "/Portfolio/Temple/01-temple.jpg",
+      description: "Tranquility is a state of mind.",
+      image: "/Portfolio/updates/Temple Beauty.jpg",
       alt: "Temple",
       delay: "pt-6"
     },
     {
       slug: "warrior",
-      title: "Warrior",
+      title: "The Warrior",
       client: "Personal Project",
       category: "Characters",
-      description: "A detailed character study of a fallen warrior, focusing on anatomical realism and dramatic lighting.",
-      image: "/Portfolio/Warrior/01-warrior-close.jpg",
+      description: "Character creation in the style of Overwatch.",
+      image: "/Portfolio/updates/War Beauty.jpg",
       alt: "Warrior",
       delay: "md:-mt-12"
     }
@@ -161,13 +161,6 @@ export default function PortfolioDashboard() {
         </div>
       </section>
 
-      {/* Pagination/Load More */}
-      <section className="mt-32 flex justify-center">
-        <button className="group flex items-center gap-4 px-12 py-6 bg-surface-container-high hover:bg-primary transition-all duration-300">
-          <span className="font-label text-xs uppercase tracking-widest text-on-surface group-hover:text-on-primary">Load more archives</span>
-          <span className="material-symbols-outlined text-primary group-hover:text-on-primary">keyboard_arrow_down</span>
-        </button>
-      </section>
     </div>
   );
 }

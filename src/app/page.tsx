@@ -18,7 +18,7 @@ export default function Home() {
                 HEATHER COURAGE
               </h1>
               <p className="font-body text-lg md:text-xl tracking-[0.4em] uppercase text-on-surface-variant font-light">
-                Senior Character &amp; Environment Artist
+                Character &amp; Creature Modeller
               </p>
             </div>
           </div>
@@ -38,15 +38,15 @@ export default function Home() {
               <div className="overflow-hidden bg-surface-container-low transition-colors duration-500 group-hover:bg-surface-container-high">
                 <img
                   alt="Marionette"
-                  className="w-full aspect-[16/9] object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out"
-                  src="/Portfolio/Marionette/Marionette-hero.jpg"
+                  className="w-full aspect-[16/9] object-cover object-[center_15%] grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out"
+                  src="/Portfolio/updates/MB Key Beauty Shot.jpg"
                 />
               </div>
               <div className="mt-8 flex justify-between items-start">
                 <div className="max-w-md">
                   <h3 className="font-headline text-2xl mb-2 group-hover:text-primary transition-colors duration-300">MARIONETTE</h3>
                   <p className="font-body text-sm text-on-surface-variant leading-relaxed">
-                    Exploring organic movement within rigid digital constraints.
+                    Concept by Katherine Bartlett.
                   </p>
                 </div>
                 <span className="font-label text-[10px] tracking-widest uppercase py-1 px-3 border border-outline-variant/30 text-on-surface-variant">Character</span>

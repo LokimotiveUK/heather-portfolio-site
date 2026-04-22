@@ -16,8 +16,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "HEATHER COURAGE | Senior Character & Environment Artist",
-  description: "Portfolio of Heather Courage, a 3D Animator and Modeler",
+  title: "HEATHER COURAGE | Character & Creature Modeller",
+  description:
+    "Portfolio of Heather Courage — London-based Character & Creature Modeller. Film, cinematic and game-optimised character pipelines.",
 };
 
 export default function RootLayout({
