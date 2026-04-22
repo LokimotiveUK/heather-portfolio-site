@@ -1,5 +1,5 @@
-import Link from "next/link";
 import ContactForm from "./ContactForm";
+import { ContactCarousel } from "@/components/ContactCarousel";
 
 export default function Contact() {
   return (
@@ -35,13 +35,23 @@ export default function Contact() {
                 <h3 className="label-md uppercase tracking-[0.2em] text-primary mb-6">Network</h3>
                 <ul className="space-y-4">
                   <li>
-                    <a className="group flex items-center gap-4 text-on-surface hover:text-primary transition-colors duration-300" href="#">
+                    <a
+                      className="group flex items-center gap-4 text-on-surface hover:text-primary transition-colors duration-300"
+                      href="https://www.artstation.com/csicada"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <span className="font-headline text-xl">ArtStation</span>
                       <span className="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-x-2 group-hover:translate-x-0">arrow_outward</span>
                     </a>
                   </li>
                   <li>
-                    <a className="group flex items-center gap-4 text-on-surface hover:text-primary transition-colors duration-300" href="#">
+                    <a
+                      className="group flex items-center gap-4 text-on-surface hover:text-primary transition-colors duration-300"
+                      href="https://www.linkedin.com/in/heather-courage/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <span className="font-headline text-xl">LinkedIn</span>
                       <span className="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-x-2 group-hover:translate-x-0">arrow_outward</span>
                     </a>
@@ -56,19 +66,15 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Visual Texture (Asymmetric Image Placement) */}
+          {/* Visual Texture: rotating beauty shots from selected projects */}
           <div className="mt-32 md:mt-64 grid grid-cols-12 gap-8 items-center">
-            <div className="col-span-12 md:col-span-7 h-[400px] md:h-[600px] overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
-              <img
-                alt="Studio scene"
-                className="w-full h-full object-cover object-center"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB00AXjOhpPEuIu8TmFFIlAn7baFNH9g5OGLoL5kyv8P8520SVwSTmKPJB-VareoBCOEe1wF9FvUSfyuXdT4VtSCouyFv99JM6JDO_gROn07Zr-BF67or_HhzfXoKEJNtqVObbpOeG2bYzorkTXifTlxxuAkR0gIbnLmNBFD_UdZbjMt8ploGaioJlJrESNk3W0j-Kt4GFdyw0_LRTZNMXt_vG3ayvDZrbnImLF24IQ0u4M-Zfzam7oCP1Dcz9lrPkNzunac_yawIg"
-              />
+            <div className="col-span-12 md:col-span-7 h-[400px] md:h-[600px]">
+              <ContactCarousel />
             </div>
             <div className="col-span-12 md:col-span-4 md:col-start-9">
               <h4 className="font-headline text-2xl mb-6">Current Availability</h4>
               <p className="text-on-surface-variant leading-relaxed">
-                Now accepting commissions for Q2 & Q3 2026. Current time zone: GMT+1. Please allow 48 hours for a response to detailed project briefs.
+                Now accepting commissions for Q2 &amp; Q3 2026. Current time zone: GMT+1. Please allow 48 hours for a response to detailed project briefs.
               </p>
             </div>
           </div>
