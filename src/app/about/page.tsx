@@ -1,190 +1,340 @@
-import Image from "next/image";
 import Link from "next/link";
+
+const credentials = [
+  { label: "Maxon Official", value: "ZBrush Live Streamer" },
+  { label: "Industry Credit", value: "The Legacy of Adam" },
+  { label: "Community", value: "Women in Games Ambassador" },
+  { label: "The Rookies", value: "A-Rank Recognition" },
+];
+
+const experience = [
+  {
+    role: "Masterclass Instructor",
+    org: "Solent University",
+    when: "2026 — Present",
+    blurb:
+      "Delivering specialist ZBrush masterclasses covering anatomy, character sculpting, and production-ready modelling workflows for undergraduate students.",
+  },
+  {
+    role: "Founder & Lead Character Artist",
+    org: "Firestorm Studio",
+    when: "2025 — Present",
+    blurb:
+      "Boutique production support delivering full character pipeline assets — high-poly sculpt through retopology, UV mapping, texturing and engine export — to indie developers on structured milestone schedules.",
+  },
+  {
+    role: "Lead Character Artist & Creative Consultant",
+    org: "Skaverna — Cinematic Fantasy IP",
+    when: "2024 — Present",
+    blurb:
+      "Leading character modelling and world-building asset production for a cinematic fantasy property; consulting on art direction, pipeline structure, and scalable workflows for both real-time and cinematic rendering.",
+  },
+  {
+    role: "Lead Character Artist",
+    org: "Project Titan — One Mind Media",
+    when: "2025",
+    blurb:
+      "Art direction and end-to-end character production on a cinematic animation piece developed as investor funding material for a full-length independent film. Established visual consistency across the production and led look development for the character roster.",
+  },
+  {
+    role: "Sculptor & Look Development Artist",
+    org: "The Legacy of Adam — Cinematic Production",
+    when: "2022 — 2024",
+    blurb:
+      "Two-year contribution to a semi-stylised cinematic production. Produced high-resolution character sculpts from photographic and concept reference, and contributed to look development across the character roster.",
+  },
+  {
+    role: "Character Artist",
+    org: "Traversed Realms — Indie Game Production",
+    when: "2023 — 2024",
+    blurb:
+      "Stylised character sculpts and models through a complete high-to-low poly pipeline — retopology, UV mapping, and PBR texture authoring in Substance Painter — optimised for real-time performance.",
+  },
+  {
+    role: "Technical Assistant & Mentor",
+    org: "CG Spectrum — Advanced 3D Programme",
+    when: "2023",
+    blurb:
+      "Invited to provide structured feedback on character modelling, sculpting, and topology to advanced students, supporting portfolio development aligned with industry production standards.",
+  },
+];
+
+const recognition = [
+  {
+    icon: "workspace_premium",
+    title: "Official Maxon ZBrush Live Streamer",
+    detail: "Selected by Maxon (2025) to demonstrate professional ZBrush sculpting workflows to an international audience.",
+  },
+  {
+    icon: "campaign",
+    title: "London Games Festival — Speaker",
+    detail: "Invited to speak to new and upcoming talent on the journey of an independent character artist and how to navigate the industry.",
+  },
+  {
+    icon: "diversity_3",
+    title: "Women in Games Ambassador",
+    detail: "Active advocate for inclusion and diversity across the games and visual effects industries.",
+  },
+  {
+    icon: "stars",
+    title: "The Rookies — Excellence / A-Rank",
+    detail: "Peer- and industry-recognised achievement in 3D character art at a globally competitive level.",
+  },
+];
+
+const coreSkills = [
+  "High-Resolution Character Sculpting",
+  "Creature Modelling",
+  "Subdivision-Ready Topology",
+  "Retopology",
+  "UV Mapping & Optimisation",
+  "Look Development",
+  "PBR Texturing & Material Authoring",
+  "Reference-Based Modelling",
+  "Cinematic & VFX Pipeline Delivery",
+  "Cross-Department Collaboration",
+  "Iterative Development from Art Direction",
+  "Asset Pipeline Planning & Workflow Consultancy",
+];
+
+const toolkit = {
+  primary: [
+    { name: "ZBrush", note: "Approved Live Streamer" },
+    { name: "Maya", note: "Modelling & Rigging" },
+    { name: "Substance Painter", note: "Texturing & Look Dev" },
+    { name: "Marmoset Toolbag", note: "Real-time Rendering" },
+    { name: "FiberShop", note: "Hair & Fur" },
+    { name: "RizomUV", note: "UV Layout" },
+  ],
+  engines: ["Unreal Engine 5", "Unity"],
+  production: ["Confluence", "GitHub", "Slack", "Jira"],
+  awareness: ["3D Coat", "Marvelous Designer", "Photoshop"],
+};
+
+const education = [
+  {
+    title: "Advanced ZBrush",
+    org: "Maxon ZBrush",
+    when: "2024 — 2025",
+    detail: "Specialist mentoring and training on advanced ZBrush usage and functionality, delivered by the ZBrush team as part of the approved Live Streamer programme.",
+  },
+  {
+    title: "Advanced 3D Character Art",
+    org: "CG Spectrum",
+    when: "2022 — 2023",
+    detail: "Specialist programme covering high-poly sculpting, retopology, UV layout, and production pipeline. Completed with distinction, leading to invitation as Technical Assistant.",
+  },
+];
 
 export default function About() {
   return (
     <>
-      {/* Hero Section — the two-column grid is wrapped in the 1920px container so
-          the portrait image doesn't expand indefinitely on ultra-wide displays. */}
+      {/* Hero */}
       <section className="min-h-screen pt-32 pb-20 bg-surface">
-        <div className="max-w-[1920px] mx-auto px-6 md:px-12 h-full grid grid-cols-1 md:grid-cols-12 gap-12 items-center min-h-[calc(100vh-0px)]">
+        <div className="max-w-[1920px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-12 items-center min-h-[calc(100vh-0px)]">
           <div className="md:col-span-5 order-2 md:order-1">
-            <span className="text-xs font-medium uppercase tracking-[0.2rem] text-primary mb-4 block">Senior Character &amp; Environment Artist</span>
-            <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight tracking-tight font-headline">Heather <br /> Courage</h1>
-            <div className="space-y-6 text-on-surface-variant max-w-lg leading-relaxed font-body">
-              <p>Heather Courage is an industry-leading artist specializing in the intersection of organic sculpting and architectural environment design. With a career forged in the fires of AAA production, she bridges the gap between technical precision and emotional storytelling.</p>
-              <p>Beyond her studio work, she is a <span className="text-primary font-bold">ZBrush Approved Streamer</span> and a dedicated <span className="text-primary font-bold">Woman in Games Ambassador</span>, mentoring the next generation of digital sculptors through community outreach and live educational content.</p>
+            <span className="text-xs font-medium uppercase tracking-[0.3em] text-primary mb-4 block">
+              Character &amp; Creature Modeller
+            </span>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight font-headline">
+              Heather <br /> Courage
+            </h1>
+            <p className="text-xs uppercase tracking-[0.3em] text-on-surface-variant mb-10">
+              London, UK · Film · Cinematic · Game Optimisation
+            </p>
+            <div className="space-y-5 text-on-surface-variant max-w-lg leading-relaxed font-body">
+              <p>
+                Production-focused Character and Creature Modeller specialising in high-resolution sculpting, clean
+                subdivision-ready geometry, and accurate model production from photographic reference, illustration,
+                and concept design. Comfortable across the full character pipeline — initial sculpt through
+                retopology, UV layout, look development, and pipeline delivery.
+              </p>
+              <p>
+                Credited as Sculptor and Look Development Artist on{" "}
+                <span className="text-primary">The Legacy of Adam</span> (2022–2024). Recognised as an{" "}
+                <span className="text-primary">Official Maxon ZBrush Live Streamer</span> since 2025, demonstrating
+                professional sculpting workflows and anatomy-driven stylised character development to an international
+                audience.
+              </p>
             </div>
           </div>
           <div className="md:col-span-7 order-1 md:order-2 h-full min-h-[500px]">
             <div className="relative w-full h-full bg-surface-container-low overflow-hidden">
               <img
-                className="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700"
+                className="w-full h-full object-cover grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-700"
                 src="/Artist/Heather-1.png"
                 alt="Heather Courage"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Personal Philosophy Block */}
-      <section className="py-32 bg-surface-container-lowest flex justify-center text-center">
-        <div className="max-w-[1920px] mx-auto px-6 md:px-12 w-full flex justify-center">
-          <div className="max-w-4xl">
-            <span className="material-symbols-outlined text-primary text-4xl mb-6" style={{ fontVariationSettings: "'FILL' 1" }}>format_quote</span>
-            <h2 className="text-3xl md:text-5xl italic font-headline text-on-surface leading-snug">
-              &ldquo;Digital art is not about recreating reality; it is about distilling the essence of form and light until the artificial becomes undeniable.&rdquo;
-            </h2>
-            <div className="mt-12 h-px w-24 bg-primary mx-auto"></div>
+      {/* Credentials Strip */}
+      <section className="py-16 md:py-20 bg-surface-container-lowest border-y border-outline-variant/10">
+        <div className="max-w-[1920px] mx-auto px-6 md:px-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+            {credentials.map((c) => (
+              <div key={c.value} className="border-l border-primary/40 pl-5">
+                <p className="text-[10px] font-medium uppercase tracking-[0.3em] text-on-surface-variant mb-2">
+                  {c.label}
+                </p>
+                <p className="font-headline text-lg md:text-xl text-on-surface leading-tight">{c.value}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Experience & Recognition */}
       <section className="py-32 bg-surface">
-        <div className="max-w-[1920px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-20">
-          <div>
-            <h2 className="text-xs font-medium uppercase tracking-[0.2rem] text-primary mb-12">Professional Milestones</h2>
-            <div className="space-y-16">
-              <div className="group">
-                <div className="flex justify-between items-baseline mb-2">
-                  <h3 className="text-2xl font-headline group-hover:text-primary transition-colors duration-300">Naughty Dog</h3>
-                  <span className="text-xs font-medium font-body text-on-surface-variant">2019 — PRESENT</span>
+        <div className="max-w-[1920px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-20">
+          <div className="md:col-span-7">
+            <h2 className="text-xs font-medium uppercase tracking-[0.3em] text-primary mb-12">
+              Selected Experience
+            </h2>
+            <div className="space-y-12">
+              {experience.map((e) => (
+                <div key={e.role + e.org} className="group border-b border-outline-variant/10 pb-10 last:border-0">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2 gap-2">
+                    <h3 className="text-xl md:text-2xl font-headline text-on-surface group-hover:text-primary transition-colors duration-300">
+                      {e.role}
+                    </h3>
+                    <span className="text-[10px] font-medium font-body uppercase tracking-[0.2em] text-on-surface-variant whitespace-nowrap">
+                      {e.when}
+                    </span>
+                  </div>
+                  <p className="text-sm uppercase tracking-[0.15em] text-primary mb-4 font-label">{e.org}</p>
+                  <p className="text-on-surface-variant leading-relaxed">{e.blurb}</p>
                 </div>
-                <p className="text-sm uppercase tracking-wider text-on-surface-variant mb-4">Senior Environment Artist</p>
-                <p className="text-on-surface-variant leading-relaxed">Leading world-building efforts for unannounced flagship titles. Focused on modular architecture systems and high-fidelity material authoring.</p>
-              </div>
-              <div className="group">
-                <div className="flex justify-between items-baseline mb-2">
-                  <h3 className="text-2xl font-headline group-hover:text-primary transition-colors duration-300">Industrial Light &amp; Magic</h3>
-                  <span className="text-xs font-medium font-body text-on-surface-variant">2016 — 2019</span>
-                </div>
-                <p className="text-sm uppercase tracking-wider text-on-surface-variant mb-4">Character &amp; Creature Artist</p>
-                <p className="text-on-surface-variant leading-relaxed">Developed hero-level digital doubles for the Star Wars cinematic universe. Pioneered new organic sculpting workflows in ZBrush.</p>
-              </div>
-              <div className="group">
-                <div className="flex justify-between items-baseline mb-2">
-                  <h3 className="text-2xl font-headline group-hover:text-primary transition-colors duration-300">Ubisoft Montreal</h3>
-                  <span className="text-xs font-medium font-body text-on-surface-variant">2013 — 2016</span>
-                </div>
-                <p className="text-sm uppercase tracking-wider text-on-surface-variant mb-4">Environment Artist</p>
-                <p className="text-on-surface-variant leading-relaxed">Assisted in the architectural layout and biome creation for large-scale open world environments.</p>
-              </div>
+              ))}
             </div>
           </div>
-          <div className="bg-surface-container-low p-12 flex flex-col justify-center">
-            <h2 className="text-xs font-medium uppercase tracking-[0.2rem] text-primary mb-12">Awards &amp; Recognition</h2>
-            <ul className="space-y-8">
-              <li className="flex gap-6 items-start">
-                <span className="text-primary material-symbols-outlined">workspace_premium</span>
-                <div>
-                  <h4 className="font-bold text-on-surface font-headline">ArtStation Grand Prize</h4>
-                  <p className="text-sm text-on-surface-variant">Game Environment Design (2022)</p>
-                </div>
-              </li>
-              <li className="flex gap-6 items-start">
-                <span className="text-primary material-symbols-outlined">stars</span>
-                <div>
-                  <h4 className="font-bold text-on-surface font-headline">ZBrush Summit Finalist</h4>
-                  <p className="text-sm text-on-surface-variant">Sculpt-Off Championship (2020)</p>
-                </div>
-              </li>
-              <li className="flex gap-6 items-start">
-                <span className="text-primary material-symbols-outlined">campaign</span>
-                <div>
-                  <h4 className="font-bold text-on-surface font-headline">WIA Recognition</h4>
-                  <p className="text-sm text-on-surface-variant">Technical Excellence Award (2021)</p>
-                </div>
-              </li>
+          <div className="md:col-span-5">
+            <h2 className="text-xs font-medium uppercase tracking-[0.3em] text-primary mb-12">
+              Recognition &amp; Community
+            </h2>
+            <ul className="space-y-10">
+              {recognition.map((r) => (
+                <li key={r.title} className="flex gap-5 items-start">
+                  <span className="text-primary material-symbols-outlined text-2xl mt-1">{r.icon}</span>
+                  <div>
+                    <h4 className="font-headline text-on-surface text-lg mb-2">{r.title}</h4>
+                    <p className="text-sm text-on-surface-variant leading-relaxed">{r.detail}</p>
+                  </div>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
       </section>
 
-      {/* Technical Expertise (Bento Grid Style) */}
+      {/* Core Skills */}
       <section className="py-32 bg-surface-container-lowest">
-        <div className="max-w-[1920px] mx-auto px-6 md:px-12">
-          <h2 className="text-xs font-medium uppercase tracking-[0.2rem] text-primary mb-16 text-center">Technical Expertise</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-surface-container-high p-10 h-80 flex flex-col justify-end transition-transform hover:-translate-y-2 duration-300">
-              <h3 className="text-2xl font-headline mb-4">High-poly Sculpting</h3>
-              <p className="text-on-surface-variant text-sm">Advanced anatomical and hard-surface sculpting with focus on micro-detail fidelity.</p>
-            </div>
-            <div className="bg-primary p-10 h-80 flex flex-col justify-end transition-transform hover:-translate-y-2 duration-300">
-              <h3 className="text-2xl font-headline mb-4 text-on-primary">PBR Texturing</h3>
-              <p className="text-on-primary-container text-sm">Physically-based rendering workflows for photorealistic material response in any engine.</p>
-            </div>
-            <div className="bg-surface-container-high p-10 h-80 flex flex-col justify-end transition-transform hover:-translate-y-2 duration-300">
-              <h3 className="text-2xl font-headline mb-4">Environment Architecture</h3>
-              <p className="text-on-surface-variant text-sm">Structural modularity and assembly for complex, narrative-driven virtual spaces.</p>
-            </div>
-            <div className="md:col-span-2 bg-surface-container p-10 h-64 flex flex-col justify-center transition-transform hover:-translate-y-2 duration-300">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-headline mb-2">Procedural Workflows</h3>
-                  <p className="text-on-surface-variant text-sm">Utilizing Houdini and Substance Designer for scalable asset generation.</p>
-                </div>
-                <div>
-                  <h3 className="text-xl font-headline mb-2">Retopology &amp; UV</h3>
-                  <p className="text-on-surface-variant text-sm">Efficient mesh optimization for real-time performance without visual compromise.</p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-surface-container-highest p-10 h-64 flex flex-col justify-center items-center text-center transition-transform hover:-translate-y-2 duration-300">
-              <span className="material-symbols-outlined text-primary text-5xl mb-4">memory</span>
-              <h3 className="text-xl font-headline">UE5 Integration</h3>
-            </div>
-          </div>
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+          <h2 className="text-xs font-medium uppercase tracking-[0.3em] text-primary mb-10 text-center">
+            Core Skills
+          </h2>
+          <p className="font-headline text-2xl md:text-4xl leading-snug text-on-surface text-center max-w-5xl mx-auto">
+            {coreSkills.map((s, i) => (
+              <span key={s}>
+                {s}
+                {i < coreSkills.length - 1 && <span className="text-primary"> · </span>}
+              </span>
+            ))}
+          </p>
         </div>
       </section>
 
-      {/* The Toolkit */}
+      {/* Toolkit */}
       <section className="py-32 bg-surface">
         <div className="max-w-[1920px] mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <div>
-              <h2 className="text-xs font-medium uppercase tracking-[0.2rem] text-primary mb-4">The Toolkit</h2>
-              <h3 className="text-4xl font-headline max-w-md">The instruments of digital craftsmanship.</h3>
+              <h2 className="text-xs font-medium uppercase tracking-[0.3em] text-primary mb-4">The Toolkit</h2>
+              <h3 className="text-3xl md:text-4xl font-headline max-w-md leading-tight">
+                The instruments of digital craftsmanship.
+              </h3>
             </div>
-            <div className="h-px bg-outline-variant w-full md:w-1/2 opacity-20"></div>
+            <div className="h-px bg-outline-variant w-full md:w-1/2 opacity-20" />
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-8 text-center">
-            <div className="p-8 border border-outline-variant/10 hover:border-primary/50 transition-colors duration-300">
-              <div className="text-primary mb-4 font-bold tracking-tighter">ZBRUSH</div>
-              <span className="text-xs uppercase text-on-surface-variant">Approved Streamer</span>
+
+          <div className="mb-12">
+            <p className="text-[10px] font-medium uppercase tracking-[0.3em] text-on-surface-variant mb-6">
+              Primary Tools
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {toolkit.primary.map((t) => (
+                <div
+                  key={t.name}
+                  className="p-6 border border-outline-variant/10 hover:border-primary/50 transition-colors duration-300 text-center"
+                >
+                  <div className="text-primary mb-3 font-bold tracking-tight font-headline text-lg">{t.name}</div>
+                  <span className="text-[10px] uppercase tracking-[0.15em] text-on-surface-variant">{t.note}</span>
+                </div>
+              ))}
             </div>
-            <div className="p-8 border border-outline-variant/10 hover:border-primary/50 transition-colors duration-300">
-              <div className="text-foreground mb-4 font-bold tracking-tighter">MAYA</div>
-              <span className="text-xs uppercase text-on-surface-variant">Complex Rigging</span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            <div>
+              <p className="text-[10px] font-medium uppercase tracking-[0.3em] text-on-surface-variant mb-4">
+                Engine Experience
+              </p>
+              <p className="font-headline text-lg text-on-surface">{toolkit.engines.join(" · ")}</p>
             </div>
-            <div className="p-8 border border-outline-variant/10 hover:border-primary/50 transition-colors duration-300">
-              <div className="text-foreground mb-4 font-bold tracking-tighter">HOUDINI</div>
-              <span className="text-xs uppercase text-on-surface-variant">Procedural Art</span>
+            <div>
+              <p className="text-[10px] font-medium uppercase tracking-[0.3em] text-on-surface-variant mb-4">
+                Production Tools
+              </p>
+              <p className="font-headline text-lg text-on-surface">{toolkit.production.join(" · ")}</p>
             </div>
-            <div className="p-8 border border-outline-variant/10 hover:border-primary/50 transition-colors duration-300">
-              <div className="text-foreground mb-4 font-bold tracking-tighter">SUBSTANCE</div>
-              <span className="text-xs uppercase text-on-surface-variant">PBR Mastery</span>
-            </div>
-            <div className="p-8 border border-outline-variant/10 hover:border-primary/50 transition-colors duration-300">
-              <div className="text-foreground mb-4 font-bold tracking-tighter">UE5</div>
-              <span className="text-xs uppercase text-on-surface-variant">Engine Tech</span>
-            </div>
-            <div className="p-8 border border-outline-variant/10 hover:border-primary/50 transition-colors duration-300">
-              <div className="text-foreground mb-4 font-bold tracking-tighter">MARVELOUS</div>
-              <span className="text-xs uppercase text-on-surface-variant">Cloth Sim</span>
+            <div>
+              <p className="text-[10px] font-medium uppercase tracking-[0.3em] text-on-surface-variant mb-4">
+                Working Awareness
+              </p>
+              <p className="font-headline text-lg text-on-surface">{toolkit.awareness.join(" · ")}</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Final CTA section */}
-      <section className="py-40 bg-surface-container-lowest text-center">
+      {/* Education & Training */}
+      <section className="py-32 bg-surface-container-lowest">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+          <h2 className="text-xs font-medium uppercase tracking-[0.3em] text-primary mb-12">Education &amp; Training</h2>
+          <div className="space-y-12">
+            {education.map((e) => (
+              <div key={e.title} className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 border-b border-outline-variant/10 pb-10 last:border-0">
+                <div className="md:col-span-3">
+                  <span className="text-[10px] font-medium font-body uppercase tracking-[0.2em] text-on-surface-variant">
+                    {e.when}
+                  </span>
+                </div>
+                <div className="md:col-span-9">
+                  <h3 className="text-2xl font-headline text-on-surface mb-2">{e.title}</h3>
+                  <p className="text-sm uppercase tracking-[0.15em] text-primary mb-4 font-label">{e.org}</p>
+                  <p className="text-on-surface-variant leading-relaxed max-w-3xl">{e.detail}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-40 bg-surface text-center">
         <div className="max-w-[1920px] mx-auto px-6 md:px-12">
-          <h2 className="text-4xl md:text-6xl font-headline mb-10">Let&apos;s build something <br /><span className="text-primary italic">extraordinary.</span></h2>
-          <Link href="/contact" className="inline-block bg-primary text-on-primary px-12 py-5 font-bold uppercase tracking-widest text-sm hover:bg-primary-container transition-colors duration-300">
-            INITIATE COLLABORATION
+          <h2 className="text-4xl md:text-6xl font-headline mb-10">
+            Let&apos;s build something <br />
+            <span className="text-primary italic">extraordinary.</span>
+          </h2>
+          <Link
+            href="/contact"
+            className="inline-block bg-primary text-on-primary px-12 py-5 font-bold uppercase tracking-[0.2em] text-sm hover:bg-primary-container transition-colors duration-300"
+          >
+            Initiate Collaboration
           </Link>
         </div>
       </section>
