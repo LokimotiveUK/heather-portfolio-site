@@ -524,12 +524,12 @@ export const projects: Record<string, Project> = {
     software: ["ZBrush", "Marvelous Designer", "Substance Painter", "Maya"],
     description:
       "Industry credit — Sculpting and Look Development. A selection of the clothing and character items produced for this semi-stylised cinematic series aimed at a rural African youth audience. Clothing was sculpted in ZBrush and Marvelous Designer before being UV'd in Maya and textured in Substance Painter.",
-    hero: { src: "/Portfolio/Legacy-of-Adam/legacy-of-adam-eliab.jpg", width: 1600, height: 2000, focal: "center 20%" },
+    hero: { src: "/Portfolio/Legacy-of-Adam/legacy-of-adam-eliab.jpg", width: 1920, height: 1080, focal: "center 35%" },
     craftRows: [
-      [img("/Portfolio/Legacy-of-Adam/legacy-of-adam-fatguy.jpg", 1600, 2000)],
-      [img("/Portfolio/Legacy-of-Adam/legacy-of-adam-jonothan.jpg", 1600, 2000)],
-      [img("/Portfolio/Legacy-of-Adam/legacy-of-adam-joseph.jpg", 1600, 2000)],
-      [img("/Portfolio/Legacy-of-Adam/legacy-of-adam-marymags.jpg", 1600, 2000)],
+      [img("/Portfolio/Legacy-of-Adam/legacy-of-adam-fatguy.jpg", 1920, 1080)],
+      [img("/Portfolio/Legacy-of-Adam/legacy-of-adam-jonothan.jpg", 1920, 1080)],
+      [img("/Portfolio/Legacy-of-Adam/legacy-of-adam-joseph.jpg", 1920, 1080)],
+      [img("/Portfolio/Legacy-of-Adam/legacy-of-adam-marymags.jpg", 1920, 1080)],
     ],
     hideSpecs: true,
   },
