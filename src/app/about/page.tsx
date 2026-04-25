@@ -51,7 +51,7 @@ const experience = [
       "Stylised character sculpts and models through a complete high-to-low poly pipeline — retopology, UV mapping, and PBR texture authoring in Substance Painter — optimised for real-time performance.",
   },
   {
-    role: "Technical Assistant & Mentor",
+    role: "Technical Assistant & Tutor",
     org: "CG Spectrum — Advanced 3D Programme",
     when: "2023",
     blurb:
@@ -100,7 +100,7 @@ const coreSkills = [
 const toolkit = {
   primary: [
     { name: "ZBrush", note: "Approved Live Streamer" },
-    { name: "Maya", note: "Modelling & Rigging" },
+    { name: "Maya", note: "Modelling & UV" },
     { name: "Substance Painter", note: "Texturing & Look Dev" },
     { name: "Marmoset Toolbag", note: "Real-time Rendering" },
     { name: "FiberShop", note: "Hair & Fur" },
@@ -115,13 +115,19 @@ const education = [
   {
     title: "Advanced ZBrush",
     org: "Maxon ZBrush",
-    when: "2024 — 2025",
+    when: "2025 — 2026",
     detail: "Specialist mentoring and training on advanced ZBrush usage and functionality, delivered by the ZBrush team as part of the approved Live Streamer programme.",
+  },
+  {
+    title: "Personal Mentorship",
+    org: "Anna Begowska",
+    when: "2024 — 2025",
+    detail: "One-to-one creative mentorship focused on stylised character development and personal portfolio direction.",
   },
   {
     title: "Advanced 3D Character Art",
     org: "CG Spectrum",
-    when: "2022 — 2023",
+    when: "2023 — 2024",
     detail: "Specialist programme covering high-poly sculpting, retopology, UV layout, and production pipeline. Completed with distinction, leading to invitation as Technical Assistant.",
   },
 ];
@@ -161,7 +167,7 @@ export default function About() {
           <div className="md:col-span-7 order-1 md:order-2 h-full min-h-[500px]">
             <div className="relative w-full h-full bg-surface-container-low overflow-hidden">
               <img
-                className="w-full h-full object-cover grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-700"
+                className="w-full h-full object-cover"
                 src="/Artist/Heather-1.png"
                 alt="Heather Courage"
               />
