@@ -26,6 +26,7 @@ export type Project = {
   description: string;
   hero: ProjectImage & { focal?: string };
   craftRows?: ProjectImage[][];
+  craftVideos?: string[];
   phases?: ProjectPhase[];
   hideSpecs?: boolean;
 };

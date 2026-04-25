@@ -1,13 +1,14 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { OptimizedVideo } from "@/components/OptimizedVideo";
+import { ClickableImage } from "@/components/ClickableImage";
 import { projects, type ProjectImage, type ProjectPhase } from "@/data/projects";
 
 function ImageBlock({ image }: { image: ProjectImage }) {
   return (
     <figure className="w-full mx-auto" style={{ maxWidth: image.width ? `${image.width}px` : undefined }}>
       <div className="bg-surface-container overflow-hidden">
-        <img
+        <ClickableImage
           src={image.src}
           alt={image.alt || image.caption || ""}
           loading="lazy"
@@ -129,6 +130,9 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
             <div className="md:col-span-8 space-y-10 md:space-y-12">
               {project.craftRows?.map((row, i) => (
                 <ImageRow key={i} images={row} />
+              ))}
+              {project.craftVideos?.map((slug) => (
+                <OptimizedVideo key={slug} slug={slug} title={project.title} />
               ))}
             </div>
           </div>
