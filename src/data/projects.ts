@@ -176,24 +176,24 @@ export const projects: Record<string, Project> = {
     hero: { src: "/Portfolio/updates/DM Beauty.jpg", width: 3876, height: 4320, focal: "center 25%" },
     craftRows: [
       [
-        img("/Portfolio/updates/DM Close1.jpg", 4320, 4320),
+        img("/Portfolio/updates/DM Beauty.jpg", 3876, 4320),
       ],
       [
-        img("/Portfolio/Dungeon Master/02-Dungeon-master-head.jpg", 1600, 2000),
-        img("/Portfolio/Dungeon Master/03-Dungeon-master-torso.jpg", 1600, 2000),
+        img("/Portfolio/updates/DM Close1.jpg", 4320, 4320),
+        img("/Portfolio/Dungeon Master/02-Dungeon-master-head.jpg", 3840, 3840),
+        img("/Portfolio/Dungeon Master/03-Dungeon-master-torso.jpg", 2160, 2160),
       ],
     ],
+    craftVideos: ["DM Turn"],
     phases: [
       {
         number: "I",
         title: "Digital Sculpting",
         caption: "Capturing the character's form and silhouette.",
         rows: [
-          [
-            img("/Portfolio/updates/DM Sclpt1.jpg", 1920, 1080),
-            img("/Portfolio/updates/DM Sculpt2.jpg", 1920, 1080),
-            img("/Portfolio/updates/DM Sculpt3.jpg", 1920, 1080),
-          ],
+          [img("/Portfolio/updates/DM Sclpt1.jpg", 1920, 1080)],
+          [img("/Portfolio/updates/DM Sculpt2.jpg", 1920, 1080)],
+          [img("/Portfolio/updates/DM Sculpt3.jpg", 1920, 1080)],
         ],
       },
       {
@@ -201,6 +201,7 @@ export const projects: Record<string, Project> = {
         title: "Topology & UVs",
         caption: "Optimising for game while keeping animation principles in mind.",
         rows: [
+          [img("/Portfolio/Dungeon Master/14-Dungeon-master-wireframe.jpg", 2160, 2160)],
           [img("/Portfolio/updates/DM UVs.jpg", 1920, 1080)],
         ],
       },
@@ -214,13 +215,6 @@ export const projects: Record<string, Project> = {
             img("/Portfolio/updates/DM Maps2.jpg", 1920, 1080),
           ],
         ],
-      },
-      {
-        number: "IV",
-        title: "Final Turntable",
-        caption: "Rendered in Marmoset Toolbag.",
-        rows: [],
-        videos: ["DM Turn"],
       },
     ],
   },
