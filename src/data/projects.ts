@@ -113,13 +113,15 @@ export const projects: Record<string, Project> = {
     hero: { src: "/Portfolio/updates/Witch Key Beauty.jpg", width: 3000, height: 3840, focal: "center 15%" },
     craftRows: [
       [
-        img("/Portfolio/updates/Witch close1.jpg", 5000, 3840),
+        img("/Portfolio/updates/Witch Key Beauty.jpg", 3000, 3840),
       ],
       [
+        img("/Portfolio/updates/Witch close1.jpg", 5000, 3840),
         img("/Portfolio/Witch/03-witch-torso.jpg", 1600, 2000),
         img("/Portfolio/Witch/04-witch-side.jpg", 1600, 2000),
       ],
     ],
+    craftVideos: ["Witch Witch Turn"],
     phases: [
       {
         number: "I",
@@ -134,10 +136,8 @@ export const projects: Record<string, Project> = {
         title: "Retopology & UVs",
         caption: "Game model optimisation with focus on baked-in details.",
         rows: [
-          [
-            img("/Portfolio/updates/Witch WireFrame.jpg", 3000, 3840),
-            img("/Portfolio/updates/Witch UV tiles.jpg", 1920, 1080),
-          ],
+          [img("/Portfolio/updates/Witch WireFrame.jpg", 3000, 3840)],
+          [img("/Portfolio/updates/Witch UV tiles.jpg", 1920, 1080)],
         ],
       },
       {
@@ -153,12 +153,11 @@ export const projects: Record<string, Project> = {
       },
       {
         number: "IV",
-        title: "Final Render",
+        title: "Render View",
         caption: "Rendered in Marmoset Toolbag.",
         rows: [
           [img("/Portfolio/updates/Marmoset Screen.jpg", 3435, 1370)],
         ],
-        videos: ["Witch Witch Turn"],
       },
     ],
   },
