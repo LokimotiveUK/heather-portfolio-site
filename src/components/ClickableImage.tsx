@@ -42,7 +42,7 @@ export function ClickableImage({ src, alt, className, style, loading = "lazy" }:
         ref={triggerRef}
         type="button"
         onClick={() => setOpen(true)}
-        className="block w-full p-0 m-0 border-0 bg-transparent text-left cursor-zoom-in focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2"
+        className="block w-full h-full p-0 m-0 border-0 bg-transparent text-left cursor-zoom-in focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2"
         aria-label={`View ${ariaText} full size`}
       >
         <img
@@ -69,12 +69,12 @@ export function ClickableImage({ src, alt, className, style, loading = "lazy" }:
               e.stopPropagation();
               setOpen(false);
             }}
-            className="absolute top-6 right-6 md:top-8 md:right-12 z-10 group flex items-center gap-3 text-on-surface-variant hover:text-primary focus-visible:text-primary focus-visible:outline-none transition-colors duration-300"
+            className="absolute top-6 right-6 md:top-8 md:right-12 z-10 group flex items-center gap-3 pl-4 pr-3 py-2 bg-background/70 backdrop-blur-md border border-outline-variant/30 text-on-surface hover:text-primary hover:border-primary focus-visible:text-primary focus-visible:border-primary focus-visible:outline-none transition-colors duration-300"
             aria-label="Close"
           >
             <span className="font-label text-[10px] tracking-[0.4em] uppercase">Close</span>
             <span
-              className="material-symbols-outlined border border-outline-variant/30 group-hover:border-primary group-focus-visible:border-primary p-1 transition-colors"
+              className="material-symbols-outlined"
               style={{ fontSize: "24px" }}
               aria-hidden="true"
             >

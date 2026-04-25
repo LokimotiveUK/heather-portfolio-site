@@ -4,17 +4,17 @@ import { OptimizedVideo } from "@/components/OptimizedVideo";
 import { ClickableImage } from "@/components/ClickableImage";
 import { projects, type ProjectImage, type ProjectPhase } from "@/data/projects";
 
-function ImageBlock({ image }: { image: ProjectImage }) {
+function ImageBlock({ image, tile }: { image: ProjectImage; tile?: boolean }) {
   const cap = image.expand ? undefined : image.width ? `${image.width}px` : undefined;
   return (
-    <figure className="w-full mx-auto" style={{ maxWidth: cap }}>
-      <div className="bg-surface-container overflow-hidden">
+    <figure className={tile ? "w-full" : "w-full mx-auto"} style={tile ? undefined : { maxWidth: cap }}>
+      <div className={`bg-surface-container overflow-hidden ${tile ? "aspect-square" : ""}`}>
         <ClickableImage
           src={image.src}
           alt={image.alt || image.caption || ""}
           loading="lazy"
-          className="w-full h-auto block"
-          style={{ aspectRatio: `${image.width} / ${image.height}` }}
+          className={tile ? "w-full h-full object-cover block" : "w-full h-auto block"}
+          style={tile ? undefined : { aspectRatio: `${image.width} / ${image.height}` }}
         />
       </div>
       {image.caption && (
@@ -26,7 +26,7 @@ function ImageBlock({ image }: { image: ProjectImage }) {
   );
 }
 
-function ImageRow({ images }: { images: ProjectImage[] }) {
+function ImageRow({ images, tile }: { images: ProjectImage[]; tile?: boolean }) {
   if (images.length === 0) return null;
   const cols =
     images.length === 1 ? "" :
@@ -36,7 +36,7 @@ function ImageRow({ images }: { images: ProjectImage[] }) {
   return (
     <div className={`grid grid-cols-1 ${cols} gap-6 md:gap-8 items-start`}>
       {images.map((image, i) => (
-        <ImageBlock key={image.src + i} image={image} />
+        <ImageBlock key={image.src + i} image={image} tile={tile} />
       ))}
     </div>
   );
@@ -129,9 +129,10 @@ export default async function PortfolioDetail({ params }: { params: Promise<{ sl
               </p>
             </div>
             <div className="md:col-span-8 space-y-10 md:space-y-12">
-              {project.craftRows?.map((row, i) => (
-                <ImageRow key={i} images={row} />
-              ))}
+              {project.craftRows?.map((row, i) => {
+                const tileable = row.length >= 2 && !row.some((img) => img.caption);
+                return <ImageRow key={i} images={row} tile={tileable} />;
+              })}
               {project.craftVideos?.map((slug) => (
                 <OptimizedVideo key={slug} slug={slug} title={project.title} />
               ))}
