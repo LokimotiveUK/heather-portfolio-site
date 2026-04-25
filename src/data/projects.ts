@@ -41,7 +41,7 @@ export const projects: Record<string, Project> = {
     title: "Marionette",
     client: "Personal Project",
     category: "Characters",
-    year: "2023",
+    year: "2026",
     tris: "41k Poly",
     textures: "4 x 2k",
     workflow: "PBR / Game",
@@ -50,20 +50,22 @@ export const projects: Record<string, Project> = {
     hero: { src: "/Portfolio/updates/MB Key Beauty Shot.jpg", width: 2275, height: 3360, focal: "center 40%" },
     craftRows: [
       [
+        img("/Portfolio/updates/MB Key Beauty Shot.jpg", 2275, 3360),
+      ],
+      [
         img("/Portfolio/updates/MB Close1.jpg", 2275, 3360),
         img("/Portfolio/updates/MB Close2.jpg", 3250, 4000),
       ],
     ],
+    craftVideos: ["MB Video1", "MB Video2"],
     phases: [
       {
         number: "I",
         title: "Digital Sculpting",
         caption: "Building the form from block-out through to fine anatomical and surface detail.",
         rows: [
-          [
-            img("/Portfolio/updates/MB sculpt Primary.jpg", 2048, 1152),
-            img("/Portfolio/updates/MB sculpt callouts.jpg", 2048, 1152),
-          ],
+          [img("/Portfolio/updates/MB sculpt Primary.jpg", 2048, 1152)],
+          [img("/Portfolio/updates/MB sculpt callouts.jpg", 2048, 1152)],
         ],
       },
       {
@@ -90,12 +92,11 @@ export const projects: Record<string, Project> = {
       },
       {
         number: "IV",
-        title: "Final Render",
+        title: "Render View",
         caption: "Rendered in Marmoset Toolbag.",
         rows: [
           [img("/Portfolio/updates/MB Viewport.jpg", 1905, 1023)],
         ],
-        videos: ["MB Video1", "MB Video2"],
       },
     ],
   },
