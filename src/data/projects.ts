@@ -232,20 +232,23 @@ export const projects: Record<string, Project> = {
     hero: { src: "/Portfolio/updates/Demon Beauty 1.jpg", width: 4000, height: 4000, focal: "center 25%" },
     craftRows: [
       [
+        img("/Portfolio/updates/Demon Beauty 1.jpg", 4000, 4000),
+      ],
+      [
         img("/Portfolio/updates/Demon close1.jpg", 4000, 4000),
+        img("/Portfolio/Demon/Demon_face.jpg", 900, 1080),
         img("/Portfolio/updates/Demon close 2.jpg", 4000, 4000),
       ],
     ],
+    craftVideos: ["Demon Beauty"],
     phases: [
       {
         number: "I",
         title: "Digital Sculpting",
         caption: "Shape and silhouette.",
         rows: [
-          [
-            img("/Portfolio/updates/Demon Sculpt 1.jpg", 1920, 1080),
-            img("/Portfolio/updates/Demon Sculpt2.jpg", 1920, 1080),
-          ],
+          [img("/Portfolio/updates/Demon Sculpt 1.jpg", 1920, 1080)],
+          [img("/Portfolio/updates/Demon Sculpt2.jpg", 1920, 1080)],
         ],
       },
       {
@@ -269,12 +272,11 @@ export const projects: Record<string, Project> = {
       },
       {
         number: "IV",
-        title: "Final Render",
+        title: "Render View",
         caption: "Final lighting and composition.",
         rows: [
           [img("/Portfolio/updates/Demon Render.jpg", 1912, 1027)],
         ],
-        videos: ["Demon Beauty"],
       },
     ],
   },
