@@ -464,13 +464,15 @@ export const projects: Record<string, Project> = {
     hero: { src: "/Portfolio/updates/Temple Beauty.jpg", width: 1779, height: 1049, focal: "center" },
     craftRows: [
       [
-        img("/Portfolio/updates/Temple Close1.jpg", 1779, 1049),
-        img("/Portfolio/updates/Temple close2.jpg", 1779, 1049),
+        img("/Portfolio/updates/Temple Beauty.jpg", 1779, 1049),
       ],
       [
+        img("/Portfolio/updates/Temple Close1.jpg", 1779, 1049),
+        img("/Portfolio/updates/Temple close2.jpg", 1779, 1049),
         img("/Portfolio/updates/Temple close3.jpg", 1920, 1080),
       ],
     ],
+    craftVideos: ["Temple Vid"],
     phases: [
       {
         number: "I",
@@ -502,12 +504,11 @@ export const projects: Record<string, Project> = {
       },
       {
         number: "IV",
-        title: "Final Render",
+        title: "Render View",
         caption: "Using Marmoset's lighting and material set-ups to add depth to the image.",
         rows: [
           [img("/Portfolio/updates/Temple marmoset view.jpg", 1915, 1031)],
         ],
-        videos: ["Temple Vid"],
       },
     ],
   },
