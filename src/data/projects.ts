@@ -355,16 +355,20 @@ export const projects: Record<string, Project> = {
     hero: { src: "/Portfolio/updates/CatBoss Beauty Shot.jpg", width: 2500, height: 1800, focal: "center" },
     craftRows: [
       [
+        img("/Portfolio/updates/CatBoss Beauty Shot.jpg", 2500, 1800),
+      ],
+      [
         img("/Portfolio/updates/Cat Close1.jpg", 2000, 2400),
         img("/Portfolio/updates/Cat CLose 2.jpg", 2000, 2400),
         img("/Portfolio/updates/Cat Close 3.jpg", 2000, 2400),
       ],
     ],
+    craftVideos: ["WildCat Turn"],
     phases: [
       {
         number: "I",
         title: "Digital Sculpting",
-        caption: "Concept to 3D.",
+        caption: "From 2D concept to print-ready 3D.",
         rows: [
           [img("/Portfolio/updates/Cat Sculpt 1.jpg", 1123, 636)],
           [img("/Portfolio/updates/Cat Sculpt 2.jpg", 3840, 783)],
@@ -385,15 +389,6 @@ export const projects: Record<string, Project> = {
         rows: [
           [img("/Portfolio/updates/Cat PBR.jpg", 3840, 655)],
         ],
-      },
-      {
-        number: "IV",
-        title: "Final Render",
-        caption: "Lights, camera, action.",
-        rows: [
-          [img("/Portfolio/updates/Cat Render.jpg", 2000, 2400)],
-        ],
-        videos: ["WildCat Turn"],
       },
     ],
   },
