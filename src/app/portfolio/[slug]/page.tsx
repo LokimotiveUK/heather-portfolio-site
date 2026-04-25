@@ -5,8 +5,9 @@ import { ClickableImage } from "@/components/ClickableImage";
 import { projects, type ProjectImage, type ProjectPhase } from "@/data/projects";
 
 function ImageBlock({ image }: { image: ProjectImage }) {
+  const cap = image.expand ? undefined : image.width ? `${image.width}px` : undefined;
   return (
-    <figure className="w-full mx-auto" style={{ maxWidth: image.width ? `${image.width}px` : undefined }}>
+    <figure className="w-full mx-auto" style={{ maxWidth: cap }}>
       <div className="bg-surface-container overflow-hidden">
         <ClickableImage
           src={image.src}

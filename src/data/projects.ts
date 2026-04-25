@@ -4,6 +4,7 @@ export type ProjectImage = {
   height: number;
   alt?: string;
   caption?: string;
+  expand?: boolean;
 };
 
 export type ProjectPhase = {
@@ -297,11 +298,15 @@ export const projects: Record<string, Project> = {
     hero: { src: "/Portfolio/updates/Toko Beauty.jpg", width: 2160, height: 2160, focal: "center 20%" },
     craftRows: [
       [
+        img("/Portfolio/updates/Toko Beauty.jpg", 2160, 2160),
+      ],
+      [
         img("/Portfolio/updates/Toko Close 1.jpg", 2160, 2160),
         img("/Portfolio/updates/Toko Close 2.jpg", 2160, 2160),
         img("/Portfolio/updates/Toko Close 3.jpg", 2160, 2160),
       ],
     ],
+    craftVideos: ["Toko Turn"],
     phases: [
       {
         number: "I",
@@ -320,10 +325,8 @@ export const projects: Record<string, Project> = {
         title: "Retopology & UVs",
         caption: "Low-poly cage with high-baked detail.",
         rows: [
-          [
-            img("/Portfolio/updates/Toko Wire.jpg", 900, 1080),
-            img("/Portfolio/updates/Toko UV.jpg", 1920, 1080),
-          ],
+          [{ ...img("/Portfolio/updates/Toko Wire.jpg", 900, 1080), expand: true }],
+          [img("/Portfolio/updates/Toko UV.jpg", 1920, 1080)],
         ],
       },
       {
@@ -336,12 +339,11 @@ export const projects: Record<string, Project> = {
       },
       {
         number: "IV",
-        title: "Final Render",
+        title: "Render View",
         caption: "Lighting the monster.",
         rows: [
           [img("/Portfolio/updates/Toko Render.jpg", 1915, 1030)],
         ],
-        videos: ["Toko Turn"],
       },
     ],
   },
