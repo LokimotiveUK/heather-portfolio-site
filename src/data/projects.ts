@@ -415,11 +415,15 @@ export const projects: Record<string, Project> = {
     hero: { src: "/Portfolio/updates/War Beauty.jpg", width: 3840, height: 4000, focal: "center 20%" },
     craftRows: [
       [
+        img("/Portfolio/updates/War Beauty.jpg", 3840, 4000),
+      ],
+      [
         img("/Portfolio/updates/war close1.png", 1920, 2000),
         img("/Portfolio/updates/War close 2.png", 1920, 2000),
         img("/Portfolio/updates/War close 3.jpg", 3840, 4000),
       ],
     ],
+    craftVideos: ["war turn"],
     phases: [
       {
         number: "I",
@@ -447,12 +451,11 @@ export const projects: Record<string, Project> = {
       },
       {
         number: "IV",
-        title: "Final Render",
+        title: "Render View",
         caption: "Rendered in Marmoset Toolbag.",
         rows: [
           [img("/Portfolio/updates/Warrior render .png", 1908, 1025)],
         ],
-        videos: ["war turn"],
       },
     ],
   },
